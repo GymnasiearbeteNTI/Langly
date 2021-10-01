@@ -8,6 +8,6 @@ get ('/lektioner') do
     File.read('public/lektioner.html')
 end
 
-get ('om-oss') do
+get ('/om-oss') do
     File.read('public/om_oss.html')
 end

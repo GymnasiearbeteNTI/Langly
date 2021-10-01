@@ -1,6 +1,5 @@
-function omar () {
-    x = 1
-    console.log(x)
+function test () {
+    alert("testet funkar :)")
 }
 
-omar();
+// test();
