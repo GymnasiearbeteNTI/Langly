@@ -1,11 +1,12 @@
 require 'sinatra'
+require 'slim'
 
 get ('/') do
-    File.read('public/index.html')
+    slim(:homepage)
 end
 
 get ('/lektioner') do
-    File.read('public/lektioner.html')
+    slim(:lessons)
 end
 
 get ('/om-oss') do
