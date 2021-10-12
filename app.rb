@@ -35,6 +35,10 @@ get ('/om_oss') do
     return slim(:om_oss)
 end
 
+get ('/quiz') do
+    return slim(:quiz)
+end
+
 get ('/login') do
     return slim(:login)
 end
@@ -47,6 +51,5 @@ get('/lektioner/:user') do |user|
         lname:important_data[1],
         favfood:important_data[2]
     }
-    "<h1>Välkommen till sidan #{x}!</h1>"
     return slim(:lessons, locals:{key:x})
 end
