@@ -2,7 +2,6 @@ require 'sinatra'
 require 'slim'
 require "bcrypt"
 
-
 # hashed_password = BCrypt::Password.create "my password"
 # storable_string = hashed_password.to_s
 
@@ -21,14 +20,12 @@ end
 login_credentials = File.readlines("crypted_users.csv")
 p login_credentials[0]
 
-
 get ('/') do
     return slim(:homepage)
-
 end
 
 get ('/lektioner') do
-    return slim(:lessons)
+    return slim(:lessons, locals:{key:x})
 end
 
 get ('/om_oss') do
@@ -45,11 +42,17 @@ end
 
 get('/lektioner/:user') do |user|
     important_data = [user,"blomquist","gurka"]
-
+    
     x = {
         fname:important_data[0],
         lname:important_data[1],
         favfood:important_data[2]
     }
+    
     return slim(:lessons, locals:{key:x})
+end
+
+get('/testdatapost') do
+
+    return slim(:testdatapost)
 end
