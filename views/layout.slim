@@ -8,5 +8,7 @@ html lang="en"
         title Document
     body
         h1.test Worlds best learning platform for learning languages!
+        -if session[:loggedin]
+            p Välkommen #{session[:user]}!
 
-        == yield
+        ==yield

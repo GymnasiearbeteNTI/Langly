@@ -1,6 +1,14 @@
 require 'sinatra'
 require 'slim'
-require "bcrypt"
+require 'sqlite3'
+require 'bcrypt'
+require_relative 'db_saker.rb'
+
+enable :sessions
+
+db = SQLite3::Database.new('db/db.db')
+db.results_as_hash = true
+
 
 # hashed_password = BCrypt::Password.create "my password"
 # storable_string = hashed_password.to_s
@@ -21,7 +29,7 @@ login_credentials = File.readlines("crypted_users.csv")
 p login_credentials[0]
 
 get ('/') do
-    return slim(:homepage)
+    index()
 end
 
 get ('/lektioner') do
@@ -36,8 +44,33 @@ get ('/quiz') do
     return slim(:quiz)
 end
 
-get ('/login') do
-    return slim(:login)
+get('/register') do
+    return slim(:register)
+end
+
+post('/login') do
+    login()    
+end
+
+post('/logout') do
+    session.destroy
+    redirect('/')
+end
+
+post('/new_thread') do
+    new_thread()
+end
+
+post('/reply/:threadId') do
+    reply()
+end
+
+post('/delete_thread') do
+    delete_thread()
+end
+
+post('/create') do
+    create()
 end
 
 get('/lektioner/:user') do |user|
@@ -55,4 +88,8 @@ end
 get('/testdatapost') do
 
     return slim(:testdatapost)
+end
+
+post('/getpost') do
+    ownmake()
 end
