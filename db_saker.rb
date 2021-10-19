@@ -74,7 +74,9 @@ def delete_thread()
 end
 
 def ownmake()
-    username = params["name"]
+    username = params["username"]
+    password = params["password"]
     p username
+    p password
     redirect('/testdatapost')
 end
