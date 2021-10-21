@@ -29,11 +29,7 @@ login_credentials = File.readlines("crypted_users.csv")
 p login_credentials[0]
 
 get ('/') do
-    index()
-end
-
-get ('/lektioner') do
-    return slim(:lessons, locals:{key:x})
+    slim(:homepage)
 end
 
 get ('/om_oss') do
@@ -46,10 +42,6 @@ end
 
 get('/register') do
     return slim(:register)
-end
-
-post('/login') do
-    login()    
 end
 
 post('/logout') do
@@ -73,23 +65,29 @@ post('/create') do
     create()
 end
 
+#Om man inte skriver något efter
+
+get ('/lektioner') do
+    redirect('/login')
+end
+
+
+ #Om man skriver något efter
 get('/lektioner/:user') do |user|
-    important_data = [user,"blomquist","gurka"]
     
     x = {
-        fname:important_data[0],
-        lname:important_data[1],
-        favfood:important_data[2]
+        fname:user,
+        lname:"ditt efternamn",
+        favfood:"nånting",
     }
     
     return slim(:lessons, locals:{key:x})
 end
 
-get('/testdatapost') do
-
+get('/login') do
     return slim(:testdatapost)
 end
 
-post('/getpost') do
-    ownmake()
+post('/login') do
+    loginfunc()
 end

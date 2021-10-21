@@ -73,10 +73,39 @@ def delete_thread()
     db = SQLite3::Database.new('db/db.db')
 end
 
-def ownmake()
+def loginfunc()
+
+
     username = params["username"]
     password = params["password"]
+
+    info = File.readlines('crypted_users.csv')
+    i = 0
+
+    # Checkar användarnamnet
+    user_found = false
+    while i < info.length
+
+        if info[i].include?(username)
+            user_found = true
+            p "user found"
+            redirect("/lektioner/#{username}")
+
+        end
+
+
+        i += 1
+
+    end
+
+    if user_found == false
+        redirect("/login")
+    end
+
+    i = 0
+
     p username
     p password
-    redirect('/testdatapost')
+    
+
 end
