@@ -2,10 +2,11 @@ require 'sinatra'
 require 'slim'
 require 'sqlite3'
 require 'bcrypt'
+require 'active_record'
 
+enable :sessions
 db = SQLite3::Database.new('db/db.db')
 db.results_as_hash = true
-
 # Creates a user by taking username and password from the form, encrypts password and inserts them into the users table
 def create()
     db = SQLite3::Database.new('db/db.db')
@@ -73,8 +74,24 @@ def delete_thread()
     db = SQLite3::Database.new('db/db.db')
 end
 
-def loginfunc()
+def registerfunc()
+    db = SQLite3::Database.new('db/db.db')
+    db.results_as_hash = true
+    uname = params["reg_username"]
+    pword = params["reg_password"]
+    begin
+        db.execute('INSERT INTO users(Username, Password) VALUES(?, ?)', uname, pword)
+        p uname
+        p pword
+    rescue
+        p "error"
+        p db.execute("SELECT Username FROM users WHERE Username =(?)", params["reg_username"])
+        redirect('/register')
+    end
+    redirect('/login')
+end
 
+def loginfunc()
 
     username = params["username"]
     password = params["password"]
@@ -87,15 +104,13 @@ def loginfunc()
     while i < info.length
 
         if info[i].include?(username)
+            
             user_found = true
             p "user found"
             redirect("/lektioner/#{username}")
 
         end
-
-
         i += 1
-
     end
 
     if user_found == false
@@ -106,6 +121,5 @@ def loginfunc()
 
     p username
     p password
-    
 
 end
