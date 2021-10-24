@@ -99,38 +99,15 @@ def loginfunc()
     loginpword = params["log_password"]
 
     info = File.readlines('crypted_users.csv')
-    i = 0
 
     begin
         existance_check = db.execute("SELECT Username FROM users WHERE Username =(?)", params["log_username"])
-        p existance_check
-        if existance_check == loginuname
+        p existance_check[0][0]
+        p loginuname
+        if existance_check[0][0] == loginuname
             redirect("/lektioner/#{loginuname}")
         end
     rescue
         redirect('/register')
     end
-    # Checkar användarnamnet
-    user_found = false
-    while i < info.length
-
-        if info[i].include?(loginuname)
-            
-            user_found = true
-            p "user found"
-            redirect("/lektioner/#{loginuname}")
-
-        end
-        i += 1
-    end
-
-    if user_found == false
-        redirect("/login")
-    end
-
-    i = 0
-
-    # p username
-    # p password
-
 end
