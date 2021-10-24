@@ -92,22 +92,33 @@ def registerfunc()
 end
 
 def loginfunc()
+    db = SQLite3::Database.new('db/db.db')
+    db.results_as_hash = true
 
-    username = params["username"]
-    password = params["password"]
+    loginuname = params["log_username"]
+    loginpword = params["log_password"]
 
     info = File.readlines('crypted_users.csv')
     i = 0
 
+    begin
+        existance_check = db.execute("SELECT Username FROM users WHERE Username =(?)", params["log_username"])
+        p existance_check
+        if existance_check == loginuname
+            redirect("/lektioner/#{loginuname}")
+        end
+    rescue
+        redirect('/register')
+    end
     # Checkar användarnamnet
     user_found = false
     while i < info.length
 
-        if info[i].include?(username)
+        if info[i].include?(loginuname)
             
             user_found = true
             p "user found"
-            redirect("/lektioner/#{username}")
+            redirect("/lektioner/#{loginuname}")
 
         end
         i += 1
@@ -119,7 +130,7 @@ def loginfunc()
 
     i = 0
 
-    p username
-    p password
+    # p username
+    # p password
 
 end

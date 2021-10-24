@@ -69,7 +69,7 @@ get('/lektioner/:user') do |user|
 end
 
 get('/login') do
-    return slim(:testdatapost)
+    return slim(:login)
 end
 
 #Alla post-metoder
