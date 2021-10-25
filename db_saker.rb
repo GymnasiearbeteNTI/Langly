@@ -2,7 +2,6 @@ require 'sinatra'
 require 'slim'
 require 'sqlite3'
 require 'bcrypt'
-require 'active_record'
 
 enable :sessions
 db = SQLite3::Database.new('db/db.db')

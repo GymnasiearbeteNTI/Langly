@@ -2,7 +2,6 @@ require 'sinatra'
 require 'slim'
 require 'sqlite3'
 require 'bcrypt'
-require 'active_record'
 require_relative 'db_saker.rb'
 
 enable :sessions
@@ -13,6 +12,7 @@ db.results_as_hash = true
 # storable_string = hashed_password.to_s
 
 # restored_hash = BCrypt::Password.new storable_string
+
 
 # puts hashed_password
 
