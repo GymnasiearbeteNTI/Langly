@@ -100,11 +100,12 @@ def loginfunc()
     info = File.readlines('crypted_users.csv')
 
     begin
-        existance_check = db.execute("SELECT Username FROM users WHERE Username =(?)", params["log_username"])
-        p existance_check[0][0]
-        p loginuname
-        if existance_check[0][0] == loginuname
+        existance_check_name = db.execute("SELECT Username FROM users WHERE Username =(?)", params["log_username"])
+        existance_check_pass = db.execute("SELECT Password FROM users WHERE Username  =(?)", params["log_username"])
+        if existance_check_name[0][0] == loginuname && existance_check_pass[0][0] == loginpword
             redirect("/lektioner/#{loginuname}")
+        else
+            redirect('/login')
         end
     rescue
         redirect('/register')
