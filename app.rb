@@ -58,6 +58,8 @@ end
  #Om man skriver något efter
 
 get('/lektioner/:user') do |user|
+
+    session[:loggedin_user] = user
     
     x = {
         fname:user,

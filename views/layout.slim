@@ -8,8 +8,12 @@ html lang="en"
         title Document
     body
         h1.test Worlds best learning platform for learning languages!
-        -if session[:loggedin]
-            p Välkommen #{session[:user]}!
+        -if session[:loggedin_user] != nil
+            p Logged in as #{session[:loggedin_user]}
+            form action="/logout" method="post" 
+                input type="submit" value="Logout"
+        -else
+            p Currently not logged in
 
         ==yield
 

@@ -4,6 +4,7 @@ require 'sqlite3'
 require 'bcrypt'
 
 enable :sessions
+
 db = SQLite3::Database.new('db/db.db')
 db.results_as_hash = true
 # Creates a user by taking username and password from the form, encrypts password and inserts them into the users table
