@@ -7,6 +7,7 @@ enable :sessions
 
 db = SQLite3::Database.new('db/db.db')
 db.results_as_hash = true
+
 # Creates a user by taking username and password from the form, encrypts password and inserts them into the users table
 def create()
     db = SQLite3::Database.new('db/db.db')
@@ -85,6 +86,7 @@ def registerfunc()
         p pword
     rescue
         p "error"
+        session[:reg_error] = true
         p db.execute("SELECT Username FROM users WHERE Username =(?)", params["reg_username"])
         redirect('/register')
     end

@@ -13,7 +13,6 @@ db.results_as_hash = true
 
 # restored_hash = BCrypt::Password.new storable_string
 
-
 # puts hashed_password
 
 storable_string = "$2a$12$tLL00wickBpuQQDnz381uOZz4zwrLYBm2ojHk1kneBIRvLM1auvNO"
@@ -30,6 +29,7 @@ p login_credentials[0]
 #Alla get-metoder
 
 get ('/') do
+    session[:reg_error] = nil
     slim(:homepage)
 end
 
@@ -49,6 +49,10 @@ get ('/register') do
     return slim(:register)
 end
 
+get('/login') do
+    return slim(:login)
+end
+
 #Om man inte skriver något efter
 
 get ('/lektioner') do
@@ -59,9 +63,9 @@ get ('/lektioner') do
     end
 end
 
- #Om man skriver något efter
+#Om man skriver något efter
 
- get('/lektioner/:user') do |user|
+get('/lektioner/:user') do |user|
 
     x = {
         fname:user,
@@ -75,9 +79,19 @@ end
     end
 end
 
-get('/login') do
-    return slim(:login)
+#Lektionernas get-metoder
+
+get('/spanska') do
+   return slim(:spanska)
 end
+
+get('/svenska') do
+    return slim(:svenska)
+ end
+
+ get('/tyska') do
+    return slim(:tyska)
+ end
 
 #Alla post-metoder
 
