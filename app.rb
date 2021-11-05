@@ -52,22 +52,27 @@ end
 #Om man inte skriver något efter
 
 get ('/lektioner') do
-    redirect('/login')
+    if session[:loggedin_user] == nil
+        redirect('/login')
+    else
+        redirect("/lektioner/#{session[:loggedin_user]}")
+    end
 end
 
  #Om man skriver något efter
 
-get('/lektioner/:user') do |user|
+ get('/lektioner/:user') do |user|
 
-    session[:loggedin_user] = user
-    
     x = {
         fname:user,
         lname:"ditt efternamn",
         favfood:"nånting",
     }
-    
-    return slim(:lessons, locals:{key:x})
+    if session[:loggedin_user] == user
+        slim(:lessons, locals:{key:x})
+    else
+        redirect('/')
+    end
 end
 
 get('/login') do
