@@ -1,11 +1,9 @@
-h2 Skapa ett konto hos oss!
+h2 Create an account
 
 form action='/create' method='POST'
             input type='text' placeholder='Username' name='reg_username' required="" autocomplete="off"
             input type='password' placeholder='Password' name='reg_password' required="" autocomplete="off"
             input type='submit' value='Join'
-
-a href="/" Tillbaka till startsidan
 
 -if session[:reg_error] == true 
     p This username is taken!

@@ -8,12 +8,16 @@ html lang="en"
         title Learning Platform
     body
         h1.test Worlds best learning platform for learning languages!
-        -if session[:loggedin_user] != nil
-            h2 Logged in as #{session[:loggedin_user]}
-            form action="/logout" method="post" 
-                input type="submit" value="Logout"
-        -else
-            h2 Currently not logged in
+
+        article.loggin_status
+            -if session[:loggedin_user] != nil
+                h2 Logged in as #{session[:loggedin_user]} 
+                form action="/logout" method="post" 
+                    input type="submit" value="Logout"
+            -else
+                h2 Currently not logged in
+
+        a href="/" Go to startpage
 
         ==yield
 

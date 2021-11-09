@@ -26,26 +26,26 @@ end
 login_credentials = File.readlines("crypted_users.csv")
 p login_credentials[0]
 
-#Alla get-metoder
+# Alla get-metoder
 
-get ('/') do
+get('/') do
     session[:reg_error] = nil
     slim(:homepage)
 end
 
-get ('/teori') do
-    slim(:teori)
+get('/kurser') do
+    slim(:kurser)
 end
 
-get ('/om_oss') do
+get('/om_oss') do
     return slim(:om_oss)
 end
 
-get ('/quiz') do
+get('/quiz') do
     return slim(:quiz)
 end
 
-get ('/register') do
+get('/register') do
     return slim(:register)
 end
 
@@ -55,7 +55,7 @@ end
 
 #Om man inte skriver något efter
 
-get ('/lektioner') do
+get('/lektioner') do
     if session[:loggedin_user] == nil
         redirect('/login')
     else
@@ -81,17 +81,41 @@ end
 
 #Lektionernas get-metoder
 
+get('/svenska') do
+    return slim(:swedish_learning_method)
+end
+
+get('/teori_svenska') do
+    return slim(:teori_svenska)
+end
+
+get('/svenska_visual') do
+    return slim(:svenska_visual)
+end
+
+get('/svenska_audio') do
+    return slim(:svenska_audio)
+end
+
+get('/svenska_text') do
+    return slim(:svenska_text)
+end
+
 get('/spanska') do
    return slim(:spanska)
 end
 
-get('/svenska') do
-    return slim(:svenska)
- end
+get('/teori_spanska') do
+    return slim(:teori_spanska)
+end
 
- get('/tyska') do
+get('/tyska') do
     return slim(:tyska)
- end
+end
+
+get('/teori_tyska') do
+    return slim(:teori_tyska)
+end
 
 #Alla post-metoder
 
