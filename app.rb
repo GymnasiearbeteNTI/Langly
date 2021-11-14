@@ -26,26 +26,26 @@ end
 login_credentials = File.readlines("crypted_users.csv")
 p login_credentials[0]
 
-# Alla get-metoder
+#Alla get-metoder
 
-get('/') do
+get ('/') do
     session[:reg_error] = nil
     slim(:homepage)
 end
 
-get('/kurser') do
-    slim(:kurser)
+get ('/teori') do
+    slim(:teori)
 end
 
-get('/om_oss') do
+get ('/om_oss') do
     return slim(:om_oss)
 end
 
-get('/quiz') do
+get ('/quiz') do
     return slim(:quiz)
 end
 
-get('/register') do
+get ('/register') do
     return slim(:register)
 end
 
@@ -55,25 +55,23 @@ end
 
 #Om man inte skriver något efter
 
-get('/lektioner') do
+get ('/courses') do
     if session[:loggedin_user] == nil
         redirect('/login')
     else
-        redirect("/lektioner/#{session[:loggedin_user]}")
+        redirect("/courses/#{session[:loggedin_user]}")
     end
 end
 
 #Om man skriver något efter
 
-get('/lektioner/:user') do |user|
+get('/courses/:user') do |user|
 
     x = {
-        fname:user,
-        lname:"ditt efternamn",
-        favfood:"nånting",
+        fname:user
     }
     if session[:loggedin_user] == user
-        slim(:lessons, locals:{key:x})
+        slim(:courses, locals:{key:x})
     else
         redirect('/')
     end
@@ -81,40 +79,54 @@ end
 
 #Lektionernas get-metoder
 
-get('/svenska') do
-    return slim(:swedish_learning_method)
-end
-
-get('/teori_svenska') do
-    return slim(:teori_svenska)
-end
-
-get('/svenska_visual') do
-    return slim(:svenska_visual)
-end
-
-get('/svenska_audio') do
-    return slim(:svenska_audio)
-end
-
-get('/svenska_text') do
-    return slim(:svenska_text)
-end
-
 get('/spanska') do
    return slim(:spanska)
 end
 
-get('/teori_spanska') do
-    return slim(:teori_spanska)
+get('/teori_spanska/visual') do
+    visual_learning = {
+        title:"Visual Learning"
+    }
+    return slim(:teori_spanska, locals:{key:visual_learning})
 end
 
-get('/tyska') do
-    return slim(:tyska)
+get('/teori_spanska/text') do
+    text_learning = {
+        title:"Text Learning"
+    }
+    return slim(:teori_spanska, locals:{key:text_learning})
 end
 
-get('/teori_tyska') do
-    return slim(:teori_tyska)
+get('/teori_spanska/audio') do
+    audio_learning = {
+        title:"Audio Learning"
+    }
+    return slim(:teori_spanska, locals:{key:audio_learning})
+end
+
+get('/svenska') do
+    return slim(:svenska)
+end
+
+get('/teori_svenska/visual') do
+    visual_learning = {
+        title:"Visual Learning"
+    }
+    return slim(:teori_svenska, locals:{key:visual_learning})
+end
+
+get('/teori_svenska/text') do
+    text_learning = {
+        title:"Text Learning"
+    }
+    return slim(:teori_svenska, locals:{key:text_learning})
+end
+
+get('/teori_svenska/audio') do
+    audio_learning = {
+        title:"Audio Learning"
+    }
+    return slim(:teori_svenska, locals:{key:audio_learning})
 end
 
 #Alla post-metoder

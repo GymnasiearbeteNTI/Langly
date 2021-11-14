@@ -1,10 +1,14 @@
-div.difficulty_wrapper Choose your preferred learning level
-    article.difficulty_article
-        h3
-            a href="/teori_svenska" Beginner
+h1.language Swedish
+
+h2.hemsidan Which learning-method would you like to use? #{session[:loggedin_user]}:
+
+div.difficulty_wrapper
     article.course_article
         h3
-            a href="/teori_svenska" Intermediate
+            a href="/teori_svenska/visual" Visual
     article.course_article
         h3
-            a href="/teori_svenska" Advanced
+            a href="/teori_svenska/audio" Audio
+    article.course_article
+        h3
+            a href="/teori_svenska/text" Text

@@ -186,3 +186,7 @@ input[type="password"] {
   text-align: center;
   display: block;
 }
+
+.language {
+  text-align: center;
+}

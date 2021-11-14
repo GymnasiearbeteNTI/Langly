@@ -11,7 +11,7 @@ html lang="en"
 
         article.loggin_status
             -if session[:loggedin_user] != nil
-                h2 Logged in as #{session[:loggedin_user]} 
+                h2 Logged in as #{session[:loggedin_user]}
                 form action="/logout" method="post" 
                     input type="submit" value="Logout"
             -else

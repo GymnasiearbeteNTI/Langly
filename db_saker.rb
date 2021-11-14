@@ -107,7 +107,7 @@ def loginfunc()
         existance_check_pass = db.execute("SELECT Password FROM users WHERE Username  =(?)", params["log_username"])
         if existance_check_name[0][0] == loginuname && existance_check_pass[0][0] == loginpword
             session[:loggedin_user] = existance_check_name[0][0]
-            redirect("/lektioner/#{loginuname}")
+            redirect("/courses/#{loginuname}")
         else
             redirect('/login')
         end
