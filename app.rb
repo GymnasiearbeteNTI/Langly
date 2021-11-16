@@ -85,7 +85,8 @@ end
 
 get('/teori_spanska/visual') do
     visual_learning = {
-        title:"Visual Learning"
+        title:"Visual Learning",
+        intro:"Here you will learn with a little help from images and other visual media #{session[:loggedin_user]}!"
     }
     return slim(:teori_spanska, locals:{key:visual_learning})
 end
