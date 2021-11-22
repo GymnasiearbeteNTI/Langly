@@ -7,22 +7,25 @@ h2=key[:intro]
 -if key[:title] == "Visual Learning"
     h2 We'll begin with a few simple conversation words
     h2 Click on the green cards below to see what they look like in spanish:
+
     section.visual_wrapper
-        article onclick="revealFunc()"
+
+        article onclick="document.getElementById('card1').innerHTML = 'Hola';"
             p#card1 Hello
-            script 
-                |function revealFunc(){cardText = document.getElementById('card1'); imgShow = document.getElementById('img1'); if(cardText.style.display === 'none'){cardText.style.display = 'inline'; imgShow.style.visibility = 'hidden';}else{cardText.style.display = 'none'; imgShow.style.visibility = 'visible';}}
-            article#img1
-                img src="https://previews.123rf.com/images/arcady31/arcady311901/arcady31190100122/115687660-hello-wave-hand-vector-icon.jpg"
-        article onclick="document.getElementById('card2').innerHTML = 'Adiós'"
+        article#img1
+            img src="https://previews.123rf.com/images/arcady31/arcady311901/arcady31190100122/115687660-hello-wave-hand-vector-icon.jpg"
+
+        article onclick="document.getElementById('card2').innerHTML = 'Adiós';"
             p#card2 Goodbye
         article#img2
             img src="https://thumbs.dreamstime.com/b/student-med-ryggs%C3%A4ckv%C3%A5gfarv%C3%A4l-33433456.jpg"
-        article onclick="document.getElementById('card3').innerHTML = 'Gracias'"
+
+        article onclick="document.getElementById('card3').innerHTML = 'Gracias';"
             p#card3 Thank you
         article#img3 
             img src="https://media.istockphoto.com/vectors/thank-you-text-drawing-vector-id470189148"
-        article onclick="document.getElementById('card4').innerHTML = 'Si'"
+
+        article onclick="document.getElementById('card4').innerHTML = 'Si';"
             p#card4 Yes
         article#img4
             img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/YES-Snowboards-logo.jpg"

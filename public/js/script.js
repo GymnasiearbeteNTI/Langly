@@ -1,3 +1,13 @@
+function revealFunc(){
+  cardText = document.getElementById('card1'); 
+  imgShow = document.getElementById('img1');
+
+  if (cardText.style.display === 'none') {
+    cardText.style.display = 'inline'; imgShow.style.visibility = 'hidden';
+  } else {
+    cardText = cardText.style.display = 'none'; imgShow.style.visibility = 'visible';}
+  }
+
 var myQuestions = [
   {
     question: "Vilket av följande är ett verb?",
