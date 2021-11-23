@@ -1,3 +1,4 @@
+
 function revealFunc(){
   cardText = document.getElementById('card1'); 
   imgShow = document.getElementById('img1');
