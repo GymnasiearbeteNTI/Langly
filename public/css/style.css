@@ -85,26 +85,49 @@ a {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: lightsalmon;
+  background-color: rgb(255, 148, 106);
 }
 
 .visual_wrapper article {
-  border: solid black 2px;
+  border: solid black 4px;
   display: flex;
   margin: 30px;
-  height: 80px;
+  height: 100px;
   width: 100px;
   text-align: center;
   justify-content: center;
   flex-direction: column;
   background-color: lightgreen;
+  cursor: pointer;
 }
 
 .visual_wrapper p {
   font-size: 20px;
 }
 
-#spanish_material {
+.card_revealer {
+  border: solid black 4px;
+  background-color: rgb(72, 229, 240);
+  text-align: center;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  margin: 10px 70px 10px 70px;
+  font-size: 30px;
+}
+
+.revealed_card {
+  pointer-events: none;
+  height: 100px;
+  object-fit: cover;
+}
+
+.hidden_card {
+  pointer-events: none;
+  display: none;
+}
+
+#spanish_material, #swedish_material {
   text-align: center;
 }
 
@@ -223,4 +246,28 @@ input[type="password"] {
 
 .language {
   text-align: center;
+}
+
+table#spanish {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgb(247, 104, 104);
+  font-size: 20px;
+}
+
+table#swedish {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgb(50, 227, 250);
+  font-size: 20px;
+}
+
+td, th {
+  border: 3px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(250, 250, 85);
 }

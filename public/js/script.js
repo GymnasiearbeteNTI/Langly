@@ -1,15 +1,29 @@
 
-function revealFunc(){
-  cardText = document.getElementById('card1'); 
-  imgShow = document.getElementById('img1');
+function translateCard() {
+  event.target.children[0].style.display = 'none';
+  event.target.children[1].style.display = 'block';
+}
 
-  if (cardText.style.display === 'none') {
-    cardText.style.display = 'inline'; imgShow.style.visibility = 'hidden';
+const turn = true;
+
+function revealCards() {
+  console.log(turn)
+  if (turn == true){
+    for (let i = 0; i < document.getElementsByClassName('hidden_card').length; i++) {
+      document.getElementsByClassName('revealed_card')[i].style.display = 'block';
+      document.getElementsByClassName('hidden_card')[i].style.display = 'none';
+      var turn = false;
+    }
   } else {
-    cardText = cardText.style.display = 'none'; imgShow.style.visibility = 'visible';}
+    for (let i = 0; i < document.getElementsByClassName('hidden_card').length; i++) {
+      document.getElementsByClassName('revealed_card')[i].style.display = 'none';
+      document.getElementsByClassName('hidden_card')[i].style.display = 'block';
+      var turn = true;
+    }
   }
+}
 
-var myQuestions = [
+const myQuestions = [
   {
     question: "Vilket av följande är ett verb?",
     answers: {

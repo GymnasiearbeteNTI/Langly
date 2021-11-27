@@ -1,71 +1,68 @@
-h1#spanish_material Learning material for spanish
+h1#swedish_material Learning material for swedish
 
 h2=key[:title]
 
 h2=key[:intro]
 
 -if key[:title] == "Visual Learning"
-    h2 We'll begin with a few simple conversation words
-    h2 Click on the green cards below to see what they look like in spanish:
+    h3 We'll begin with a few simple conversation words
+    h3 Click on the green cards below to see what they look like in swedish:
 
     section.visual_wrapper
 
         article onclick="translateCard()"
             img.revealed_card src="https://previews.123rf.com/images/arcady31/arcady311901/arcady31190100122/115687660-hello-wave-hand-vector-icon.jpg"
-            p.hidden_card Hola
+            p.hidden_card Hej
 
         article onclick="translateCard()"
             img.revealed_card src="https://thumbs.dreamstime.com/b/student-med-ryggs%C3%A4ckv%C3%A5gfarv%C3%A4l-33433456.jpg"
-            p.hidden_card Adiós
+            p.hidden_card Hejdå
 
         article onclick="translateCard()"
             img.revealed_card src="https://media.istockphoto.com/vectors/thank-you-text-drawing-vector-id470189148"
-            p.hidden_card Gracias
+            p.hidden_card Tack
 
         article onclick="translateCard()"
             img.revealed_card src="https://upload.wikimedia.org/wikipedia/commons/d/dc/YES-Snowboards-logo.jpg"
-            p.hidden_card Si
+            p.hidden_card Ja
 
     article.card_revealer onclick="revealCards()"
         p.revealed_card Flip all cards
             
 -elsif key[:title] == "Text Learning"
-    p Read spanish text and learn along the way
+    p Read swedish text and learn along the way
     h2 We'll begin with a few basic words
-    h2 Read what the english words mean in spanish!
+    h2 Read what the english words mean in swedish!
 
-    table#spanish
+    table#swedish
         tr
-            th Spanish word
+            th Swedish word
             th English word
         tr
-            td Me llamo
+            td Jag heter
             td My name is
         tr
-            td Mi nombre es
-            td My name is
-        tr
-            td Hola, soy Markus
+            td Hej, jag heter Markus
             td Hi, I'm Markus
         tr
-            td ¿Cómo te llamas?
+            td Vad heter du?
             td What is your name?
         tr
-            td ¿Cómo estás?
+            td Hur mår du?
             td How are you?
         tr
-            td Buenos días
+            td Goddag
             td Good morning
         tr
-            td Buenas tardes
+            td God kväll
             td Good afternoon
         tr
-            td Buenas noches
+            td God natt
             td Good night
 
 -elsif key[:title] == "Audio Learning"
     h2 We'll begin with a few animals
-    h2 Listen to the audio to learn what the words mean in spanish:
+    h2 Listen to the audio to learn what the words mean in swedish:
 
     audio controls=true autoplay=false loop=false muted=false
         source src="/misc/kurs1.mp3" type="audio/mpeg"

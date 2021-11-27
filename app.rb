@@ -105,29 +105,33 @@ get('/spanish/audio') do
     return slim(:spanish, locals:{key:audio_learning})
 end
 
-get('/svenska') do
-    return slim(:svenska)
+get('/choose_swedish') do
+    return slim(:choose_swedish)
 end
 
-get('/teori_svenska/visual') do
+get('/swedish') do
+    return slim(:swedish)
+end
+
+get('/swedish/visual') do
     visual_learning = {
         title:"Visual Learning"
     }
-    return slim(:teori_svenska, locals:{key:visual_learning})
+    return slim(:swedish, locals:{key:visual_learning})
 end
 
-get('/teori_svenska/text') do
+get('/swedish/text') do
     text_learning = {
         title:"Text Learning"
     }
-    return slim(:teori_svenska, locals:{key:text_learning})
+    return slim(:swedish, locals:{key:text_learning})
 end
 
-get('/teori_svenska/audio') do
+get('/swedish/audio') do
     audio_learning = {
         title:"Audio Learning"
     }
-    return slim(:teori_svenska, locals:{key:audio_learning})
+    return slim(:swedish, locals:{key:audio_learning})
 end
 
 #Post-metoder
