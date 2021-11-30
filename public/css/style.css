@@ -6,6 +6,16 @@ body {
   background-color: antiquewhite;
 }
 
+.wrapper_spanish {
+  background-image: linear-gradient(to right, red, yellow);
+  margin: 10px;
+}
+
+.wrapper_swedish {
+  margin: 10px;
+  background-image: linear-gradient(to right, yellow, royalblue);
+}
+
 #courses {
   text-align: center;
 }
@@ -109,8 +119,9 @@ a {
   border: solid black 4px;
   background-color: rgb(72, 229, 240);
   text-align: center;
+  padding: 10px;
   cursor: pointer;
-  height: auto;
+  height: 80px;
   width: auto;
   margin: 10px 70px 10px 70px;
   font-size: 30px;
@@ -129,6 +140,76 @@ a {
 
 #spanish_material, #swedish_material {
   text-align: center;
+}
+
+
+/* Pairing exercise */
+
+
+#pairingexcersice {
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 450px;
+  background-color: gray;
+  border-radius: 30px;
+
+}
+
+#pairthem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#selectwords {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  background-color: rgb(36, 32, 32);
+  border-radius: 10px;
+}
+
+#selectwords div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100px;
+  height: 40px;
+  background-color: salmon;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#selectwords div:hover {
+
+  cursor: grab;
+
+}
+
+
+.pair {
+  margin-bottom: 30px;
+}
+
+.pair div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  background-color: salmon;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .card {
@@ -153,7 +234,6 @@ a {
 .subtitle {
   text-align: center;
   font-weight: bold;
-
 }
 
 .btn-text {

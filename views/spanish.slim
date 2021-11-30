@@ -26,8 +26,56 @@ h2=key[:intro]
             img.revealed_card src="https://upload.wikimedia.org/wikipedia/commons/d/dc/YES-Snowboards-logo.jpg"
             p.hidden_card Si
 
-    article.card_revealer onclick="revealCards()"
-        p.revealed_card Flip all cards
+        article.card_revealer onclick="revealCards(turn)"
+            p.revealed_card Flip all cards
+
+    h2 We'll contunie with verbs in basic form
+    h2 Click on the green cards below to see what they look like in spanish:
+
+    section.visual_wrapper
+
+        article onclick="translateCard()"
+            img.revealed_card src="https://cdn-prod.medicalnewstoday.com/content/images/articles/320/320056/man-gobbling-down-pasta.jpg"
+            p.hidden_card Comer
+
+        article onclick="translateCard()"
+            img.revealed_card src="https://post.greatist.com/wp-content/uploads/sites/2/2020/04/GRT-female-walking-street-1200x628-facebook-1200x628.jpg"
+            p.hidden_card Ir
+
+        article onclick="translateCard()"
+            img.revealed_card src="https://domf5oio6qrcr.cloudfront.net/medialibrary/5971/eef1d959-0e25-43d2-a257-249b56b37558.jpg"
+            p.hidden_card Beber
+
+        article onclick="translateCard()"
+            img.revealed_card src="https://media.istockphoto.com/photos/overhead-view-of-girl-lying-on-bed-and-reading-book-picture-id807406062?b=1&k=20&m=807406062&s=170667a&w=0&h=V8HwGdovhlzmVCVU6EubGOMlOYnRLXPgeH3zh7CoGeI="
+            p.hidden_card Leer
+
+        article.card_revealer onclick="revealCards(turn)"
+            p.revealed_card Flip all cards
+
+    h2 Next up, some adjekitv
+    h2 Click on the green cards below to see what they look like in spanish:
+
+    section.visual_wrapper
+
+        article onclick="translateCard()"
+            img.revealed_card src="https://images.theconversation.com/files/153560/original/image-20170120-5227-1rz00z2.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
+            p.hidden_card Viejo
+
+        article onclick="translateCard()"
+            img.revealed_card src="https://www.boystown.org/parenting/PublishingImages/QA_EffectiveDiscipline6YrOld.jpg"
+            p.hidden_card Joven
+
+        article onclick="translateCard()"
+            img.revealed_card src="https://st.depositphotos.com/1035372/1999/i/600/depositphotos_19994159-stock-photo-man-in-snow-storm.jpg"
+            p.hidden_card Frío
+
+        article onclick="translateCard()"
+            img.revealed_card src="https://img.freepik.com/free-vector/happy-cute-kid-girl-feels-so-thirsty-because-hot-weather-summer-season_97632-3419.jpg?size=338&ext=jpg"
+            p.hidden_card Caliente
+
+        article.card_revealer onclick="revealCards(turn)"
+            p.revealed_card Flip all cards
             
 -elsif key[:title] == "Text Learning"
     p Read spanish text and learn along the way
@@ -70,3 +118,25 @@ h2=key[:intro]
     audio controls=true autoplay=false loop=false muted=false
         source src="/misc/kurs1.mp3" type="audio/mpeg"
         | Your browser does not support the audio tag.
+
+
+    section#pairingexcersice
+        section#selectwords
+            div Cow
+            div Ropa 
+            div Hola 
+            div Clothes 
+            div Vacca
+            div Hello
+
+        section#pairthem
+            section.pair
+                div Drag a swedish word here
+                div Drag a spanish word here
+            section.pair
+                div Drag a swedish word here
+                div Drag a spanish word here
+            section.pair
+                div Drag a swedish word here
+                div Drag a spanish word here
+ 

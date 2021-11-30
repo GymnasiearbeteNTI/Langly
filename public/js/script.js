@@ -4,21 +4,20 @@ function translateCard() {
   event.target.children[1].style.display = 'block';
 }
 
-const turn = true;
+var turn = true;
 
-function revealCards() {
-  console.log(turn)
-  if (turn == true){
-    for (let i = 0; i < document.getElementsByClassName('hidden_card').length; i++) {
-      document.getElementsByClassName('revealed_card')[i].style.display = 'block';
-      document.getElementsByClassName('hidden_card')[i].style.display = 'none';
-      var turn = false;
+function revealCards(flip) {
+  if (flip == true){
+    for (let i = 0; i < event.target.parentElement.getElementsByClassName('hidden_card').length; i++) {
+      event.target.parentElement.getElementsByClassName('revealed_card')[i].style.display = 'block';
+      event.target.parentElement.getElementsByClassName('hidden_card')[i].style.display = 'none';
+      turn = false;
     }
   } else {
-    for (let i = 0; i < document.getElementsByClassName('hidden_card').length; i++) {
-      document.getElementsByClassName('revealed_card')[i].style.display = 'none';
-      document.getElementsByClassName('hidden_card')[i].style.display = 'block';
-      var turn = true;
+    for (let i = 0; i < event.target.parentElement.getElementsByClassName('hidden_card').length; i++) {
+      event.target.parentElement.getElementsByClassName('revealed_card')[i].style.display = 'none';
+      event.target.parentElement.getElementsByClassName('hidden_card')[i].style.display = 'block';
+      turn = true;
     }
   }
 }
