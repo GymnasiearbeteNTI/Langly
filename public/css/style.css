@@ -8,12 +8,13 @@ body {
 
 .wrapper_spanish {
   background-image: linear-gradient(to right, red, yellow);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(251,255,73,1) 0%, rgba(244,94,20,1) 100%);
   margin: 10px;
 }
 
 .wrapper_swedish {
   margin: 10px;
-  background-image: linear-gradient(to right, yellow, royalblue);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(251,255,73,1) 0%, rgba(59,215,247,1) 100%);
 }
 
 #courses {
@@ -25,6 +26,10 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+}
+
+#startpage {
+  font-size: 20px;
 }
 
 .difficulty_wrapper {
@@ -42,6 +47,13 @@ body {
   width: 150px;
   margin: 30px;
   text-align: center;
+}
+
+#header {
+  background-color: rgb(117, 245, 117);
+  text-align: center;
+  font-size: 25px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .course_article {
@@ -142,21 +154,16 @@ a {
   text-align: center;
 }
 
-
 /* Pairing exercise */
 
-
 #pairingexcersice {
-
-
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   height: 450px;
-  background-color: gray;
+  background-color: salmon;
   border-radius: 30px;
-
 }
 
 #pairthem {
@@ -165,7 +172,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 
 #selectwords {
   display: flex;
@@ -182,7 +188,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   width: 100px;
   height: 40px;
   background-color: salmon;
@@ -191,11 +196,8 @@ a {
 }
 
 #selectwords div:hover {
-
   cursor: grab;
-
 }
-
 
 .pair {
   margin-bottom: 30px;
@@ -205,9 +207,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: auto;
   height: 40px;
-  background-color: salmon;
+  background-color: greenyellow;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -331,7 +333,6 @@ input[type="password"] {
 table#spanish {
   border-collapse: collapse;
   width: 100%;
-  background-color: rgb(247, 104, 104);
   font-size: 20px;
 }
 
@@ -348,6 +349,22 @@ td, th {
   padding: 8px;
 }
 
+#title {
+  text-align: center;
+}
+
+#intro {
+  text-align: center;
+}
+
 tr:nth-child(even) {
-  background-color: rgb(250, 250, 85);
+  background-color: #f4ff53;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(255, 109, 109);
+}
+
+#text {
+  font-size: 20px;
 }

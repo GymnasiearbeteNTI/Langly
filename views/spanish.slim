@@ -1,8 +1,8 @@
 h1#spanish_material Learning material for spanish
 
-h2=key[:title]
+h1#title=key[:title]
 
-h2=key[:intro]
+h2#intro=key[:intro]
 
 -if key[:title] == "Visual Learning"
     h2 We'll begin with a few simple conversation words
@@ -78,19 +78,15 @@ h2=key[:intro]
             p.revealed_card Flip all cards
             
 -elsif key[:title] == "Text Learning"
-    p Read spanish text and learn along the way
     h2 We'll begin with a few basic words
     h2 Read what the english words mean in spanish!
 
     table#spanish
         tr
-            th Spanish word
-            th English word
+            th#header Spanish word
+            th#header English word
         tr
             td Me llamo
-            td My name is
-        tr
-            td Mi nombre es
             td My name is
         tr
             td Hola, soy Markus
@@ -119,24 +115,25 @@ h2=key[:intro]
         source src="/misc/kurs1.mp3" type="audio/mpeg"
         | Your browser does not support the audio tag.
 
+    h2 Drag and drop the correct words to the correct places to test your knowledge after listening to spanish!
 
     section#pairingexcersice
-        section#selectwords
-            div Cow
-            div Ropa 
-            div Hola 
-            div Clothes 
-            div Vacca
-            div Hello
+        section#selectwords ondrop="drop(event)" ondragover="allowDrop(event)"
+            div#drag1 draggable="true" ondragstart="dragStart(event)" Cow
+            div#drag2 draggable="true" ondragstart="dragStart(event)" Ropa 
+            div#drag3 draggable="true" ondragstart="dragStart(event)" Hola 
+            div#drag4 draggable="true" ondragstart="dragStart(event)" Clothes 
+            div#drag5 draggable="true" ondragstart="dragStart(event)" Vacca
+            div#drag6 draggable="true" ondragstart="dragStart(event)" Hello
 
-        section#pairthem
+        section#pairthem 
+            section.pair 
+                div#drop1 ondrop="drop(event)" ondragover="allowDrop(event)" 
+                    div Vaca
+                div#drop2 ondrop="drop(event)" ondragover="allowDrop(event)" Drag a spanish word here
             section.pair
-                div Drag a swedish word here
-                div Drag a spanish word here
+                div#drop3 ondrop="drop(event)" ondragover="allowDrop(event)" Drag a swedish word here
+                div#drop4 ondrop="drop(event)" ondragover="allowDrop(event)" Drag a spanish word here
             section.pair
-                div Drag a swedish word here
-                div Drag a spanish word here
-            section.pair
-                div Drag a swedish word here
-                div Drag a spanish word here
- 
+                div#drop5 ondrop="drop(event)" ondragover="allowDrop(event)" Drag a swedish word here
+                div#drop6 ondrop="drop(event)" ondragover="allowDrop(event)" Drag a spanish word here

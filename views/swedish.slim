@@ -1,12 +1,12 @@
-h1#swedish_material Learning material for swedish
+h1#spanish_material Learning material for spanish
 
 h2=key[:title]
 
 h2=key[:intro]
 
 -if key[:title] == "Visual Learning"
-    h3 We'll begin with a few simple conversation words
-    h3 Click on the green cards below to see what they look like in swedish:
+    h2 We'll begin with a few simple conversation words
+    h2 Click on the green cards below to see what they look like in spanish:
 
     section.visual_wrapper
 
@@ -26,10 +26,10 @@ h2=key[:intro]
             img.revealed_card src="https://upload.wikimedia.org/wikipedia/commons/d/dc/YES-Snowboards-logo.jpg"
             p.hidden_card Ja
 
-    article.card_revealer onclick="revealCards()"
-        p.revealed_card Flip all cards
+        article.card_revealer onclick="revealCards(turn)"
+            p.revealed_card Flip all cards
 
-    h2 We'll contunie with some verbs
+    h2 We'll contunie with verbs in basic form
     h2 Click on the green cards below to see what they look like in spanish:
 
     section.visual_wrapper
@@ -50,8 +50,8 @@ h2=key[:intro]
             img.revealed_card src="https://media.istockphoto.com/photos/overhead-view-of-girl-lying-on-bed-and-reading-book-picture-id807406062?b=1&k=20&m=807406062&s=170667a&w=0&h=V8HwGdovhlzmVCVU6EubGOMlOYnRLXPgeH3zh7CoGeI="
             p.hidden_card Läsa
 
-    article.card_revealer onclick="revealCards(turn)"
-        p.revealed_card Flip all cards
+        article.card_revealer onclick="revealCards(turn)"
+            p.revealed_card Flip all cards
 
     h2 Next up, some adjekitv
     h2 Click on the green cards below to see what they look like in spanish:
@@ -67,15 +67,15 @@ h2=key[:intro]
             p.hidden_card Ung
 
         article onclick="translateCard()"
-            img.revealed_card src="https://img.freepik.com/free-vector/happy-cute-kid-girl-feels-so-thirsty-because-hot-weather-summer-season_97632-3419.jpg?size=338&ext=jpg"
+            img.revealed_card src="https://st.depositphotos.com/1035372/1999/i/600/depositphotos_19994159-stock-photo-man-in-snow-storm.jpg"
             p.hidden_card Kallt
 
         article onclick="translateCard()"
-            img.revealed_card src="https://media.istockphoto.com/photos/overhead-view-of-girl-lying-on-bed-and-reading-book-picture-id807406062?b=1&k=20&m=807406062&s=170667a&w=0&h=V8HwGdovhlzmVCVU6EubGOMlOYnRLXPgeH3zh7CoGeI="
+            img.revealed_card src="https://img.freepik.com/free-vector/happy-cute-kid-girl-feels-so-thirsty-because-hot-weather-summer-season_97632-3419.jpg?size=338&ext=jpg"
             p.hidden_card Varmt
 
-    article.card_revealer onclick="revealCards(turn)"
-        p.revealed_card Flip all cards
+        article.card_revealer onclick="revealCards(turn)"
+            p.revealed_card Flip all cards
             
 -elsif key[:title] == "Text Learning"
     p Read swedish text and learn along the way

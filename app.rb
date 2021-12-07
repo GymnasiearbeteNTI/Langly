@@ -37,8 +37,8 @@ get ('/teori') do
     slim(:teori)
 end
 
-get ('/om_oss') do
-    return slim(:om_oss)
+get ('/about') do
+    return slim(:about)
 end
 
 get ('/quiz') do
@@ -93,14 +93,16 @@ end
 
 get('/spanish/text') do
     text_learning = {
-        title:"Text Learning"
+        title:"Text Learning",
+        intro: "Read spanish text and learn along the way#{session[:loggedin_user]}!"
     }
     return slim(:spanish, locals:{key:text_learning})
 end
 
 get('/spanish/audio') do
     audio_learning = {
-        title:"Audio Learning"
+        title:"Audio Learning",
+        intro: "Listen to spanish and learn along the way#{session[:loggedin_user]}!"
     }
     return slim(:spanish, locals:{key:audio_learning})
 end
