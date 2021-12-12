@@ -34,10 +34,6 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("Text");
   ev.target.appendChild(document.getElementById(data));
-  if(document.getElementById(data).parentElement.childElementCount > 0){
-    console.log(document.getElementById(data).parentElement.childNodes[0]);
-    document.getElementById(data).parentElement.childNodes[0].style.display = 'none';
-  }
 }
 
 // const myQuestions = [

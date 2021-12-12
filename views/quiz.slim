@@ -8,6 +8,49 @@ html lang="en"
     title Document
   body
     h2 See how much you've improved by taking our quiz!
-    #quiz
-    button#submit Get Results
-    #results
+    / #quiz
+    / button#submit Get Results
+    / #results
+    form action="/results" method="POST"
+      label Part One: Verbs 😃🥶
+      br
+      label Question 1, select the verb (or verbs):
+      br
+      input type="checkbox" name="right"
+      label Ir
+      br
+      input type="checkbox" name="wrong"
+      label Días
+      br
+      input type="checkbox" name="right2"
+      label Comer
+      br
+      input type="checkbox" name="wrong"
+      label Joven
+      br
+      input#check_result type="submit" value="Check Result :/"
+      br
+      label Part Two: Adjectives 😃🥶
+      br
+      label Question 2, select the adjective (or adjectives):
+      br
+      input type="checkbox" name="right"
+      label Frio
+      br
+      input type="checkbox" name="wrong"
+      label Buenas Días
+      br
+      input type="checkbox" name="wrong"
+      label Hola
+      br
+      input type="checkbox" name="right2"
+      label Joven
+      br
+      input#check_result type="submit" value="Check Result :/"
+
+    h3 Results:
+    -if session[:quiz_result]
+      h4#correct_answer Correct! You may take this opportunity to relieve your misery.
+    -elsif session[:quiz_result] == false
+      h4#wrong_answer Wrong! I suggest you adapt extreme caution, for your comming hours will be all that you have.
+    -else

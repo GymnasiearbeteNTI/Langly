@@ -3,7 +3,56 @@
 }
 
 body {
-  background-color: antiquewhite;
+  background-color: #DBE2EF;
+}
+
+#register {
+  background-color: rgb(40, 103, 197);
+  color: white;
+  border-radius: 20px;
+  margin: 10px;
+  height: 50px;
+  width: fit-content;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#check_result {
+  background-color: rgb(40, 103, 197);
+  color: white;
+  border-radius: 20px;
+  margin: 10px;
+  height: 30px;
+  width: fit-content;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#correct_answer {
+  color: green;
+}
+
+#wrong_answer {
+  color:red;
+}
+
+label {
+  font-size: 20px;
+}
+
+#login, #logout {
+  background-color: rgb(40, 103, 197);
+  color: white;
+  border-radius: 20px;
+  margin: 10px;
+  height: 50px;
+  width: fit-content;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#log_un, #log_pw {
+  font-size: 20px;
 }
 
 .wrapper_spanish {
@@ -21,15 +70,46 @@ body {
   text-align: center;
 }
 
-.course_wrapper {
-  display:flex;
-  flex-direction: row;
+.main_wrap {
+  display: flex;
   justify-content: center;
-  align-items: flex-start;
+}
+
+.course_wrapper {
+  background: beige;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px grey;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose_course {
+  display: flex;
+  flex-direction: row;
+}
+
+#spanish_course_button:hover {
+  text-decoration: underline;
+}
+
+#swedish_course_button:hover {
+  text-decoration: underline;
 }
 
 #startpage {
-  font-size: 20px;
+  font-size: 30px;
+  color: green;
+  font-weight: bold;
+  position: fixed;
+  top: 22px;
+  left: 10px;
+}
+
+#startpage:hover {
+  text-decoration: underline;
 }
 
 .difficulty_wrapper {
@@ -57,13 +137,17 @@ body {
 }
 
 .course_article {
-  background: thistle;
-  border: black solid 2px;
-  border-radius: 3px;
+  background: #6f8aaa;
+  color: rgb(255, 255, 255);
+  font-size: 19px;
+  border-radius: 5px;
   height: 150px;
   width: 150px;
   margin: 30px;
   text-align: center;
+}
+a:visited {
+  color: inherit;
 }
 
 .loggin_status {

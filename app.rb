@@ -29,6 +29,7 @@ p login_credentials[0]
 #Alla get-metoder
 
 get ('/') do
+    session[:quiz_result] = nil
     session[:reg_error] = nil
     slim(:homepage)
 end
@@ -149,4 +150,20 @@ end
 post('/logout') do
     session.destroy
     redirect('/')
+end
+
+post('/results') do
+
+    if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on"
+        session[:quiz_result] = true
+    else
+        session[:quiz_result] = false
+    end
+
+    if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on"
+        session[:quiz_result] = true
+    else
+        session[:quiz_result] = false
+    end
+    redirect('/quiz')
 end
