@@ -167,3 +167,7 @@ post('/results') do
     end
     redirect('/quiz')
 end
+
+get('/unlessyoueatthefleshofthesonofmananddrinkhisblood') do
+    "<img src='https://gottebiten.se/media/catalog/product/cache/image/1000x1320/e9c3970ab036de70892d86c6d221abfe/7/3/7310070766113.jpg' alt='THE ENEMY OF GOD'>"
+end
