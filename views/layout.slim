@@ -8,18 +8,23 @@ html lang="en"
         link rel="stylesheet" href="/css/style.css"/
         title Learning Platform
     body
-        h1.test Langly - Worlds best platform for learning languages!
 
-        article.loggin_status
-            -if session[:loggedin_user] != nil
-                h2 Logged in as #{session[:loggedin_user]}
-                form action="/logout" method="post"
-                    input#logout type="submit" value="Logout"
-            -else
-                h2 Currently not logged in
+        nav 
+            article.loggin_status
+                -if session[:loggedin_user] != nil
+                    h2 Logged in as #{session[:loggedin_user]}
+                    form action="/logout" method="post"
+                        input#logout type="submit" value="Logout"
+                -else
+                    h2 Currently not logged in
 
-        a#startpage href="/" Back to homepage
+            a href="/" Back to homepage
+
 
         ==yield
+
+        footer 
+
+            h2 lol
 
         script src="/js/script.js"
