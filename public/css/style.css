@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@500&display=swap');
 
 * {
-
-  
-
+  margin: 0;
   line-height: 130%;
   letter-spacing: -.01em;
   font-family: 'Source Sans 3', sans-serif;
-  margin: 0 0 0.8em;
   font-weight: 500;
-
 }
 
 
@@ -54,11 +50,11 @@ label {
 #login, #logout {
   background-color: rgb(40, 103, 197);
   color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 10px;
-  height: 50px;
+  height: auto;
   width: fit-content;
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -83,8 +79,10 @@ label {
 }
 
 .main_wrap {
+  height: 80vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .course_wrapper {
@@ -105,7 +103,6 @@ label {
 
 
 
-<<<<<<< Updated upstream
 #startpage {
   font-size: 30px;
   color: green;
@@ -113,16 +110,27 @@ label {
   position: absolute;
   top: 22px;
   left: 10px;
-=======
-
-
+}
 
 nav {
   color: white;
   background-color: #3F72AF;
   width: 100%;
-  
->>>>>>> Stashed changes
+}
+
+#logo {
+  display: flex;
+  height: 7vh;
+  width: 100%;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #3F72AF;
+  color: white;
+}
+
+#logo h1 {
+  letter-spacing: 2px;
 }
 
 #startpage:hover {
@@ -146,38 +154,31 @@ nav {
   text-align: center;
 }
 
-#header {
-  background-color: rgb(117, 245, 117);
-  text-align: center;
-  font-size: 25px;
+header {
+  background-image: url('../public/img/head.jpeg');
+  font-size: 20px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .course_article {
-  background: #6f8aaa;
-  color: rgb(255, 255, 255);
+  background: #3F72AF;
+  color: whitesmoke !important;
   font-size: 19px;
   border-radius: 5px;
   height: 150px;
   width: 150px;
   margin: 30px;
   text-align: center;
-
 }
 
+.choose_course a:visited{
+  color: white!important;
+}
 
 .coursebutton {
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-}
-
-.course_article:hover {
-
-  cursor: pointer;
-
 }
 
 a:visited {
@@ -257,6 +258,38 @@ a {
   font-size: 30px;
 }
 
+header {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(238, 158, 144);
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+
+}
+
+header a {
+
+  margin-right: 50px;
+
+}
+
+header a:first-child {
+
+  margin-left: 20px;
+  
+}
+
+.button {
+  border: 3px green solid;
+  background-color: green;
+  color: white;
+  font-size: 25px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
 .revealed_card {
   pointer-events: none;
   height: 100px;
@@ -311,6 +344,11 @@ a {
   background-color: salmon;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+#girl, #them {
+  width: auto;
+  height: 300px;
 }
 
 #selectwords div:hover {

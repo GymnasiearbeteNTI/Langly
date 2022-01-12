@@ -9,7 +9,11 @@ html lang="en"
         title Learning Platform
     body
 
-        nav 
+        section#logo
+            h1 Langly
+
+        nav
+           
             article.loggin_status
                 -if session[:loggedin_user] != nil
                     h2 Logged in as #{session[:loggedin_user]}
@@ -18,13 +22,12 @@ html lang="en"
                 -else
                     h2 Currently not logged in
 
-            a href="/" Back to homepage
-
+            a href="/" Back to homepage         
 
         ==yield
 
         footer 
 
-            h2 lol
+
 
         script src="/js/script.js"

@@ -95,7 +95,7 @@ end
 get('/spanish/text') do
     text_learning = {
         title:"Text Learning",
-        intro: "Read spanish text and learn along the way#{session[:loggedin_user]}!"
+        intro: "Read spanish text and learn along the way #{session[:loggedin_user]}!"
     }
     return slim(:spanish, locals:{key:text_learning})
 end
@@ -103,7 +103,7 @@ end
 get('/spanish/audio') do
     audio_learning = {
         title:"Audio Learning",
-        intro: "Listen to spanish and learn along the way#{session[:loggedin_user]}!"
+        intro: "Listen to spanish and learn along the way #{session[:loggedin_user]}!"
     }
     return slim(:spanish, locals:{key:audio_learning})
 end
@@ -118,21 +118,24 @@ end
 
 get('/swedish/visual') do
     visual_learning = {
-        title:"Visual Learning"
+        title:"Visual Learning",
+        intro:"Here you will learn with a little help from images and other visual media #{session[:loggedin_user]}!"
     }
     return slim(:swedish, locals:{key:visual_learning})
 end
 
 get('/swedish/text') do
     text_learning = {
-        title:"Text Learning"
+        title:"Text Learning",
+        intro: "Read spanish text and learn along the way #{session[:loggedin_user]}!"
     }
     return slim(:swedish, locals:{key:text_learning})
 end
 
 get('/swedish/audio') do
     audio_learning = {
-        title:"Audio Learning"
+        title:"Audio Learning",
+        intro:"Listen to spanish and learn along the way #{session[:loggedin_user]}!"
     }
     return slim(:swedish, locals:{key:audio_learning})
 end
@@ -153,12 +156,6 @@ post('/logout') do
 end
 
 post('/results') do
-
-    if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on"
-        session[:quiz_result] = true
-    else
-        session[:quiz_result] = false
-    end
 
     if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on"
         session[:quiz_result] = true
