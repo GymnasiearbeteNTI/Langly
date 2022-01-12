@@ -86,7 +86,7 @@ label {
 }
 
 .course_wrapper {
-  background: beige;
+  background: rgb(255, 255, 255);
   width: 600px;
   border-radius: 10px;
   box-shadow: 10px 10px 10px grey;
