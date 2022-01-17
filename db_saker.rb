@@ -82,12 +82,8 @@ def registerfunc()
     pword = params["reg_password"]
     begin
         db.execute('INSERT INTO users(Username, Password) VALUES(?, ?)', uname, pword)
-        p uname
-        p pword
     rescue
-        p "error"
         session[:reg_error] = true
-        p db.execute("SELECT Username FROM users WHERE Username =(?)", params["reg_username"])
         redirect('/register')
     end
     redirect('/login')
@@ -105,13 +101,16 @@ def loginfunc()
     begin
         existance_check_name = db.execute("SELECT Username FROM users WHERE Username =(?)", params["log_username"])
         existance_check_pass = db.execute("SELECT Password FROM users WHERE Username  =(?)", params["log_username"])
-        if existance_check_name[0][0] == loginuname && existance_check_pass[0][0] == loginpword
-            session[:loggedin_user] = existance_check_name[0][0]
-            redirect("/courses/#{loginuname}")
-        else
+
+        if existance_check_pass[0][0] != loginpword
+            session[:log_error] = "Password error, the password was not correct :/"
             redirect('/login')
+        else
+            session[:loggedin_user] = existance_check_name[0][0]
+            redirect('/courses')
         end
     rescue
-        redirect('/register')
+        session[:log_error] = "Username error, this username does not exist. Please check your spelling or make an account, this is your last chance :/"
+        redirect('/login')
     end
 end

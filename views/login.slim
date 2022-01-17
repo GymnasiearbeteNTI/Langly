@@ -1,7 +1,15 @@
-h2 You are just one step away from great learning!
-h2 Login to see your courses
 
-form action="/login" method="POST"
-    input#log_un type="text" name="log_username" placeholder="username" required="" autocomplete="off"
-    input#log_pw type="password" name="log_password" placeholder="password" required="" autocomplete="off"
-    input#login type="submit" Value="Login"
+div class="form_holder"
+
+    div
+
+        h2 You are just one step away from great learning!
+        h2 Login to see your courses
+
+    form action="/login" method="POST"
+        h2 Enter credentials here
+        input#log_un type="text" name="log_username" placeholder="Username" required="" autocomplete="off"
+        input#log_pw type="password" name="log_password" placeholder="Password" required="" autocomplete="off"
+        input#login type="submit" Value="Login"
+
+        p=session[:log_error]

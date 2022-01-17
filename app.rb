@@ -31,6 +31,7 @@ p login_credentials[0]
 get ('/') do
     session[:quiz_result] = nil
     session[:reg_error] = nil
+    session[:log_error] = nil
     slim(:homepage)
 end
 
@@ -157,11 +158,12 @@ end
 
 post('/results') do
 
-    if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on"
+    if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on" && params["text1"].downcase == "hi" && params["text2"].downcase == "friend"
         session[:quiz_result] = true
     else
         session[:quiz_result] = false
     end
+
     redirect('/quiz')
 end
 
