@@ -110,7 +110,7 @@ def loginfunc()
             redirect('/courses')
         end
     rescue
-        session[:log_error] = "Username error, this username does not exist. Please check your spelling or make an account, this is your last chance :/"
+        session[:log_error] = "Username error, this username does not exist. Please check your spelling or make an account"
         redirect('/login')
     end
 end
