@@ -6,7 +6,9 @@
   letter-spacing: -.01em;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 500;
+  transition: all 0.2s ease-out;
 }
+
 
 
 body {
@@ -14,23 +16,19 @@ body {
 }
 
 .form_holder {
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
 
 .form_holder div {
-
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
   justify-content: center;
   align-items: center;
-
 }
 
 .form_holder form {
@@ -39,13 +37,10 @@ body {
   background-color: white;
   display: flex;
   flex-direction: column;
-
 }
 
 .form_holder form h2 {
-
   text-align: center;
-
 }
 
 #register {
@@ -93,6 +88,10 @@ label {
   cursor: pointer;
 }
 
+#login:hover, #logout:hover {
+  background: #1f7beb;
+}
+
 #log_un, #log_pw {
   font-size: 20px;
 }
@@ -111,6 +110,16 @@ label {
 #courses {
   text-align: center;
   margin-top: 50px;
+}
+
+.methodbox{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.not_available {
+  cursor: not-allowed;
+  background-color: gray !important;
 }
 
 .main_wrap {
@@ -135,8 +144,6 @@ label {
   display: flex;
   flex-direction: row;
 }
-
-
 
 #startpage {
   font-size: 30px;
@@ -216,6 +223,10 @@ header {
   text-align: center;
 }
 
+.course_article:hover {
+  background: #1f7beb;
+}
+
 .choose_course a:visited{
   color: white!important;
 }
@@ -224,6 +235,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 a:visited {

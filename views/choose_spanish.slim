@@ -1,18 +1,16 @@
-div.wrapper_spanish
-    h1.language Spanish
 
-    h2.hemsidan Hey, #{session[:loggedin_user]}! Which learning-method would you like to use?
 
-    div.difficulty_wrapper
-        a href="/spanish/visual"
-            article.course_article 
-                h3 Visual
-                p Learning via images
-        a href="/spanish/audio"
-            article.course_article
-                h3 Audio
-                p Learning via sounds
-        a href="/spanish/text"
-            article.course_article
-                h3 Text
-                p Learning via text
+div.main_wrap
+    div.course_wrapper.methodbox
+    
+        h2#courses Hey, #{session[:loggedin_user]}! Which learning-method would you like to use?
+        
+        div.choose_course
+            a.coursebutton.course_article href="/spanish/visual"
+                h3.course_button Images
+            
+            a.coursebutton.course_article href="/spanish/audio"
+                h3.course_button Audio
+
+            a.coursebutton.course_article href="/spanish/text"
+                h3.course_button Texts

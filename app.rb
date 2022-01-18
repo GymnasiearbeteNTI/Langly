@@ -55,8 +55,6 @@ get('/login') do
     return slim(:login)
 end
 
-#Om man inte skriver något efter
-
 get ('/courses') do
     if session[:loggedin_user] == nil
         redirect('/login')
@@ -64,8 +62,6 @@ get ('/courses') do
         redirect("/courses/#{session[:loggedin_user]}")
     end
 end
-
-#Om man skriver något efter
 
 get('/courses/:user') do |user|
 
@@ -78,8 +74,6 @@ get('/courses/:user') do |user|
         redirect('/')
     end
 end
-
-#Lektionernas get-metoder
 
 get('/choose_spanish') do
    return slim(:choose_spanish)
@@ -141,8 +135,6 @@ get('/swedish/audio') do
     return slim(:swedish, locals:{key:audio_learning})
 end
 
-#Post-metoder
-
 post('/create') do
     registerfunc()
 end
@@ -158,7 +150,7 @@ end
 
 post('/results') do
 
-    if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on" && params["text1"].downcase == "hi" && params["text2"].downcase == "friend"
+    if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on" && params["text1"].downcase == "hi" && params["text2"].downcase == "friend" && params["text3"].downcase == "rabbit" && params["text3"].downcase == "hamburguesa"
         session[:quiz_result] = true
     else
         session[:quiz_result] = false

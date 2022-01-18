@@ -14,6 +14,7 @@ html lang="en"
     form action="/results" method="POST"
       label Part One: Verbs 😃
       br
+      br
       label Question 1, select the verb (or verbs):
       br
       input type="checkbox" name="right"
@@ -45,7 +46,6 @@ html lang="en"
       label Carro
       br
 
-
       br
       label Question 3, select the verb (or verbs):
       br
@@ -65,6 +65,7 @@ html lang="en"
       br
       label Part Two: Adjectives 😃
       br
+      br
       label Question 4, select the adjective (or adjectives):
       br
       input type="checkbox" name="right"
@@ -82,6 +83,7 @@ html lang="en"
 
       br
       label Part Three: Arithmetic Words 😃
+      br
       br
       label Question 5, select the arithmetic words (numbers):
       br
@@ -116,6 +118,7 @@ html lang="en"
 
       br
       label Part Four: Pronoun Words 😃
+      br
       br
       label Question 7, select the correct pronoun in the picture:
       br
@@ -155,6 +158,7 @@ html lang="en"
       br
       label Part Five: Articles 😃
       br
+      br
       label Question 9, select the correct article before the word:
       br
       label Gato
@@ -175,16 +179,83 @@ html lang="en"
       br
       input type="checkbox" name="right"
       label La
+      br
 
       br
-      label Question 11, translate "Hola":
+      label Part Six: Translating Words 😃
       br
-      input type="text" name="text1" autocomplete="off"
+      br
+      label Question 11, translate "Hola" to English and write your answer in the box:
+      br
+      input type="text" name="text1" autocomplete="off" placeholder="Write your answer"
 
       br
-      label Question 12, translate "Amiga":
+      label Question 12, translate "Amiga" to English and write your answer in the box:
       br
-      input type="text" name="text2" autocomplete="off"
+      input type="text" name="text2" autocomplete="off" placeholder="Write your answer"
+
+      br
+      label Question 13, translate "Conejo" to English and write your answer in the box:
+      br
+      input type="text" name="text3" autocomplete="off" placeholder="Write your answer"
+
+      br
+      label Question 14, translate "Hamburger" to Spanish and write your answer in the box:
+      br
+      input type="text" name="text4" autocomplete="off" placeholder="Write your answer"
+
+      br
+      label Part Seven: Listeningen Comprehension 😃
+      br
+      br
+      label Question 15, select the spanish word in english:
+      br
+      audio controls=true autoplay=false loop=false muted=false
+        source src="/misc/papa.mp3" type="audio/mpeg"
+        | Your browser does not support the audio tag. 
+      br
+      input type="checkbox" name="wrong"
+      label Cat
+      br
+      input type="checkbox" name="right"
+      label Potato
+      br
+      input type="checkbox" name="wrong"
+      label Sun
+      br
+
+      br
+      label Question 16, select the spanish word in english:
+      br
+      audio controls=true autoplay=false loop=false muted=false
+        source src="/misc/kurs1.mp3" type="audio/mpeg"
+        | Your browser does not support the audio tag. 
+      br
+      input type="checkbox" name="wrong"
+      label Food
+      br
+      input type="checkbox" name="right"
+      label Computer
+      br
+      input type="checkbox" name="wrong"
+      label Clock
+      br
+
+      br
+      label Question 17, select the spanish word in english:
+      br
+      audio controls=true autoplay=false loop=false muted=false
+        source src="/misc/kurs1.mp3" type="audio/mpeg"
+        | Your browser does not support the audio tag. 
+      br
+      input type="checkbox" name="wrong"
+      label Shoe
+      br
+      input type="checkbox" name="right"
+      label T-shirt
+      br
+      input type="checkbox" name="wrong"
+      label Hat
 
       br
       input#check_result type="submit" value="Check Result :/"
