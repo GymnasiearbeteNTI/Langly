@@ -6,10 +6,7 @@
   letter-spacing: -.01em;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 500;
-  transition: all 0.2s ease-out;
 }
-
-
 
 body {
   background-color: #DBE2EF;
@@ -232,6 +229,7 @@ header {
 }
 
 .coursebutton {
+  transition: all 0.2s ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -523,8 +521,9 @@ input[type="password"] {
 
 table#spanish {
   border-collapse: collapse;
-  width: 100%;
+  width: auto;
   font-size: 20px;
+  margin: 40px;
 }
 
 table#swedish {
@@ -556,6 +555,28 @@ tr:nth-child(odd) {
   background-color: rgb(255, 109, 109);
 }
 
-#text {
+#about_us {
   font-size: 20px;
+  margin: 10px;
+}
+
+#three_fingers {
+  width: 20px;
+  height: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #5595e2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+footer div {
+  padding: 5px;
 }

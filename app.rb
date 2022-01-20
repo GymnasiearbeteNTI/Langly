@@ -150,7 +150,7 @@ end
 
 post('/results') do
 
-    if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on" && params["text1"].downcase == "hi" && params["text2"].downcase == "friend" && params["text3"].downcase == "rabbit" && params["text3"].downcase == "hamburguesa"
+    if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on" && params["text1"].downcase == "hi" && params["text2"].downcase == "friend" && params["text3"].downcase == "rabbit" && params["text4"].downcase == "hamburguesa"
         session[:quiz_result] = true
     else
         session[:quiz_result] = false

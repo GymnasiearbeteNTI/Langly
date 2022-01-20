@@ -13,7 +13,6 @@ def create()
     db = SQLite3::Database.new('db/db.db')
     db.results_as_hash = true
     name = params["name"]
-    p name
     password = BCrypt::Password.create(params["pass"])
     db.execute('INSERT INTO users(Username, Password) VALUES(?, ?)', name, password) 
     redirect('/')
