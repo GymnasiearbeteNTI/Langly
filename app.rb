@@ -68,6 +68,7 @@ get('/courses/:user') do |user|
     x = {
         fname:user
     }
+
     if session[:loggedin_user] == user
         slim(:courses, locals:{key:x})
     else

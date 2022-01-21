@@ -108,7 +108,7 @@ h2#intro=key[:intro]
             td No
 
     p As you might have spotted, verbs' roots in spanish end in either -ar, -er, or -ir. These in turn can be conjugated to suit their scenario, and fortunatley they all conjugated quite similarly!
-    p Let's have a look att how -ar, -er, and -ir, conjugate.
+    p Let's have a look att how -ar, -er, and -ir, conjugate. 
 
     table#spanish
         tr
@@ -201,6 +201,38 @@ h2#intro=key[:intro]
             td Viven
     
     p Notice how in first person the ending will always be -o. Also, whatch the similarities between the different kinds of the conjugations, they only differ in the vowel (which happens to be the same as the root form's vowel!).
+    P Verbs are a little more advance, of course, but this will suffice.
+    br
+    p Next up, pronouns. They will help clear up the conjugation of verbs.
+
+    table#spanish
+        tr
+            th#header In English
+            th#header In Spanish
+        tr
+            td Me
+            td Yo
+        tr
+            td You
+            td Tú
+        tr
+            td You (formal)
+            td Usted
+        tr
+            td He
+            td Él
+        tr
+            td She
+            td Ella
+        tr
+            td You (them there)
+            td Vostros
+        tr
+            td We
+            td Nosotros
+        tr
+            td You (them)
+            td Ellos
 
 -elsif key[:title] == "Audio Learning"
     h2 We'll begin with a few animals
@@ -214,26 +246,35 @@ h2#intro=key[:intro]
 
     section#pairingexcersice
         section#selectwords
-            div#drag1 draggable="true" ondragstart="dragStart(event)" Cow
-            div#drag2 draggable="true" ondragstart="dragStart(event)" Ropa 
-            div#drag3 draggable="true" ondragstart="dragStart(event)" Hola 
-            div#drag4 draggable="true" ondragstart="dragStart(event)" Clothes 
-            div#drag5 draggable="true" ondragstart="dragStart(event)" Vacca
-            div#drag6 draggable="true" ondragstart="dragStart(event)" Hello
+            
+            section.wordpair ondrop="drop(event, this, 3)" ondragover="allowDrop(event)"
+                div.pair_number First pair
+                div#drag1 draggable="true" ondragstart="dragStart(event)" Cow
+                div#drag2 draggable="true" ondragstart="dragStart(event)" Ropa
+
+            section.wordpair ondrop="drop(event, this, 3)" ondragover="allowDrop(event)"
+                div.pair_number Second pair
+                div#drag3 draggable="true" ondragstart="dragStart(event)" Hola 
+                div#drag4 draggable="true" ondragstart="dragStart(event)" Clothes
+
+            section.wordpair ondrop="drop(event, this, 3)" ondragover="allowDrop(event)"
+                div.pair_number Third pair
+                div#drag5 draggable="true" ondragstart="dragStart(event)" Vacca
+                div#drag6 draggable="true" ondragstart="dragStart(event)" Hello
 
         section#pairthem 
             section.pair 
-                div#drop1 ondrop="drop(event)" ondragover="allowDrop(event)" 
-                    div The first word:
-                div#drop2 ondrop="drop(event)" ondragover="allowDrop(event)"
-                    div The second word:
+                div#drop1 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)" 
+                    p The first word:
+                div#drop2 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
+                    p The second word:
             section.pair
-                div#drop3 ondrop="drop(event)" ondragover="allowDrop(event)"
-                    div The third word:
-                div#drop4 ondrop="drop(event)" ondragover="allowDrop(event)"
-                    div The forth word:
+                div#drop3 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
+                    p The third word:
+                div#drop4 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
+                    p The forth word:
             section.pair
-                div#drop5 ondrop="drop(event)" ondragover="allowDrop(event)"
-                    div The fifth word:
-                div#drop6 ondrop="drop(event)" ondragover="allowDrop(event)"
-                    div The sixth word:
+                div#drop5 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
+                    p The fifth word:
+                div#drop6 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
+                    p The sixth word:
