@@ -160,15 +160,15 @@ post('/results') do
 
     user_id = db.execute("SELECT userId FROM users WHERE Username=(?)",session[:loggedin_user]).first
     
-    results = db.execute("SELECT results FROM quiz_result WHERE user_id=(?)",user_id)
+    results = db.execute("SELECT QuizResult FROM users WHERE userId=(?)",user_id).first.join(',')
 
     case params["method"]
     when "text"
-        db.execute("INSERT INTO quiz_result(user_id,results) VALUES(?,?)",user_id,)
+        db.execute("UPDATE users SET QuizResult=(?) WHERE userId=(?)",(results+"-"+session[:quiz_result].to_s+"TEXT"),user_id)
     when "audio"
-        p "a"
+        db.execute("UPDATE users SET QuizResult=(?) WHERE userId=(?)",(results+"-"+session[:quiz_result].to_s+"AUDIO"),user_id)
     when "visual"
-        p "e"
+        db.execute("UPDATE users SET QuizResult=(?) WHERE userId=(?)",(results+"-"+session[:quiz_result].to_s+"VISUAL"),user_id)
     end
 
     redirect('/quiz')
