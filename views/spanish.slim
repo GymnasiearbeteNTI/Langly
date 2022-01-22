@@ -1,8 +1,12 @@
+div.gap
 h1#spanish_material Learning material for spanish
 
 h1#title=key[:title]
+div.gap
 
 h2#intro=key[:intro]
+
+div.gap
 
 -if key[:title] == "Visual Learning"
     p.spanish We'll begin with a few simple conversation words
@@ -29,7 +33,7 @@ h2#intro=key[:intro]
         article.card_revealer onclick="revealCards(turn)"
             p.revealed_card Flip all cards
 
-    p.spanish We'll contunie with verbs in basic form
+    p.spanish We'll continue with verbs in infinitive
     p.spanish Click on the green cards below to see what they look like in spanish:
 
     section.visual_wrapper
@@ -78,208 +82,333 @@ h2#intro=key[:intro]
             p.revealed_card Flip all cards
             
 -elsif key[:title] == "Text Learning"
-    h2.spanish_bigger We'll begin with some nouns.
-    p.spanish There is no specific way to learn what is, and what isn't, a noun. Since this course is mainly introductional, we'll just show a list of some nouns and you may take your time to learn them.
 
-    table#spanish
-        tr
-            th#header Spanish words
-            th#header English translation
-        tr
-            td Hola
-            td Hello
-        tr
-            td Amigo
-            td Friend
-        tr
-            td Hamburguesa
-            td Hamburger
-        tr
-            td Agua
-            td Water
-        tr
-            td Conejo
-            td Rabbit
-        tr
-            td Ordenador
-            td Computer
-        tr
-            td Bolso
-            td Bag
-        tr
-            td Patata
-            td Potato
-        tr
-            td Lapiz
-            td Pen
-        tr
-            td Gato
-            td Cat
-        tr
-            td Sol
-            td Sun
-        tr
-            td Comida
-            td Food
-        tr
-            td Reloj
-            td Clock
-        tr
-            td Camiseta
-            td T-shirt
-        tr
-            td Zapatos
-            td Shoes
-        tr
-            td Gorra
-            td Hat
+    section#text_section
+        h2.spanish_bigger We'll begin with some nouns.
+        p.spanish There is no specific way to learn what is, and what isn't, a noun. Since this course is mainly introductional, we'll just show a list of some nouns and you may take your time to learn them.
+        p.spanish Mind pronunciation! in spanish two l:s together "ll" is pronunced as a "j" whilst "j" in spanish is pronunced as "ch".
 
-    h2.spanish_bigger Next up, adjectives.
-    p.spanish Learning adjectives will be a similar case to learning nouns
+        table#spanish
+            tr
+                th#header Spanish word
+                th#header English translation
+            tr
+                td Hola
+                td Hello
+            tr
+                td Amigo
+                td Friend
+            tr
+                td Hamburguesa
+                td Hamburger
+            tr
+                td Agua
+                td Water
+            tr
+                td Conejo
+                td Rabbit
+            tr
+                td Ordenador
+                td Computer
+            tr
+                td Bolso
+                td Bag
+            tr
+                td Patata
+                td Potato
+            tr
+                td Lapiz
+                td Pen
+            tr
+                td Gato
+                td Cat
+            tr
+                td Sol
+                td Sun
+            tr
+                td Comida
+                td Food
+            tr
+                td Reloj
+                td Clock
+            tr
+                td Camiseta
+                td T-shirt
+            tr
+                td Zapatos
+                td Shoes
+            tr
+                td Gorra
+                td Hat
 
-    h2.spanish_bigger Next up, verbs. 
-    p.spanish Verbs in spanish can be identified by how they end. First, look at the table below and try to understand how verbs (in their root form) differ from other words.
+        h2.spanish_bigger Next up, adjectives.
+        p.spanish Learning adjectives will be a similar case to learning nouns, there isn't really a structure to follow so instead here's a table with a few adjectives.
 
-    table#spanish
-        tr
-            th#header Spanish words
-            th#header Is it a verb?
-        tr
-            td Comer
-            td Yes
-        tr
-            td Rojo
-            td No
-        tr
-            td Nombre
-            td No
-        tr
-            td Estar
-            td Yes
-        tr
-            td Bien
-            td No
-        tr
-            td Ir
-            td Yes
-        tr
-            td Hola
-            td No
+        table#spanish
+            tr
+                th#header Spanish word
+                th#header English translation
+            tr
+                td Inteligente
+                td Smart
+            tr
+                td Blanco
+                td White
+            tr
+                td Frío
+                td Cold
+            tr
+                td Feliz
+                td Happy
+            tr
+                td Triste
+                td Sad
+            tr
+                td Grande
+                td Big 
+            tr
+                td Pequeño
+                td Little
 
-    p.spanish As you might have spotted, verbs end in either -ar, -er, or -ir, so whenever you come across a word witch end in those ways, you can be fairly certain that it's a verb.
-    p.spanish Conjugation of verbs is something we will not dive deeper into, so instead you can have a look at the table below which consists of a few verbs and their english translation.
-    p.spanish Mind pronunciation! in spanish two l:s together "ll" is pronunced as a "j" whilst "j" in spanish is pronunced as "ch".
+        h2.spanish_bigger Next up, verbs. 
+        p.spanish Verbs in spanish can be identified by how they end. First, look at the table below and try to understand how verbs (in their root form) differ from other words.
 
-    table#spanish
-        tr
-            th#header Spanish words
-            th#header English translation
-        tr
-            td Comer
-            td Eat
-        tr
-            td Hacer
-            td Do
-        tr
-            td Ir
-            td Walk
-        tr
-            td Gustar
-            td Like
-        tr
-            td Beber
-            td Drink
-        tr
-            td Jugar
-            td play
+        table#spanish
+            tr
+                th#header Spanish word
+                th#header Is it a verb?
+            tr
+                td Comer
+                td Yes
+            tr
+                td Rojo
+                td No
+            tr
+                td Nombre
+                td No
+            tr
+                td Estar
+                td Yes
+            tr
+                td Bien
+                td No
+            tr
+                td Ir
+                td Yes
+            tr
+                td Hola
+                td No
 
-    h2.spanish_bigger Next up, pronouns.
-    p.spanish They become more important when looking into the more advanced spanish, but for now just know ther exist and how they differ from english.
+        p.spanish As you might have spotted, verbs end in either -ar, -er, or -ir, so whenever you come across a word witch end in those ways, you can be fairly certain that it's a verb.
+        p.spanish Conjugation of verbs is something we will not dive deeper into, so instead you can have a look at the table below which consists of a few verbs and their english translation.
 
-    table#spanish
-        tr
-            th#header In English
-            th#header In Spanish
-        tr
-            td Me
-            td Yo
-        tr
-            td You
-            td Tú
-        tr
-            td You (formal)
-            td Usted
-        tr
-            td He
-            td Él
-        tr
-            td She
-            td Ella
-        tr
-            td You (them there)
-            td Vostros
-        tr
-            td We
-            td Nosotros
-        tr
-            td You (them)
-            td Ellos
+        table#spanish
+            tr
+                th#header Spanish word
+                th#header English translation
+            tr
+                td Comer
+                td Eat
+            tr
+                td Hacer
+                td Do
+            tr
+                td Ir
+                td Walk
+            tr
+                td Gustar
+                td Like
+            tr
+                td Beber
+                td Drink
+            tr
+                td Jugar
+                td play
 
+        h2.spanish_bigger Next up, pronouns.
+        p.spanish They become more important when looking into the more advanced spanish, but for now just know ther exist and how they differ from english.
+
+        table#spanish
+            tr
+                th#header In English
+                th#header In Spanish
+            tr
+                td Me
+                td Yo
+            tr
+                td You
+                td Tú
+            tr
+                td You (formal)
+                td Usted
+            tr
+                td He
+                td Él
+            tr
+                td She
+                td Ella
+            tr
+                td You (them there)
+                td Vostros
+            tr
+                td We
+                td Nosotros
+            tr
+                td You (them)
+                td Ellos
+
+        h2.spanish_bigger Next up, numbers.
+        p.spanish In this course we'll just go over the numbers between 1 and 10, so here they are.
+
+        table#spanish
+            tr
+                th#header In Spanish
+                th#header In English
+            tr
+                td Uno
+                td One
+            tr
+                td Dos
+                td Two
+            tr
+                td Tres
+                td Three
+            tr
+                td Quatros
+                td Four
+            tr
+                td Cinco
+                td Five
+            tr
+                td Seis
+                td Six
+            tr
+                td Siete
+                td Seven
+            tr
+                td Ocho
+                td Eight
+            tr
+                td Nueve
+                td Nine
+            tr
+                td Dies
+                td Ten
+            tr
+                td Cien
+                td One hundred
+        
+        h2.spanish_bigger Final part, articles.
+        p.spanish The following table shows the articles for defined/indefined, masculine/feminine, and plural/singular.
+
+        table#spanish
+            tr
+                th#header In Spanish
+                th#header In English
+            tr
+                td masculine indefinite singular
+                td El
+            tr
+                td feminine indefinite singular
+                td La
+            tr
+                td masculine indefinite plural
+                td Los
+            tr
+                td feminine indefinite plural
+                td Las
+            tr
+                td masculine definite singular
+                td Un
+            tr
+                td feminine definite singular
+                td Una
+            tr
+                td masculine definite plural
+                td Unos
+            tr
+                td feminine definite plural
+                td Unas
+    
+        h2.spanish_bigger And that's the it for this course. You are now qualified to take our quiz!
+
+        div.gap
+        div.gap
+
+        
 -elsif key[:title] == "Audio Learning"
     h2.spanish_bigger We'll begin with a few animals
     h2.spanish_bigger Listen to the audio to learn what the words mean in spanish:
 
     audio controls=true autoplay=false loop=false muted=false
-        source src="/misc/nouns.mp3" type="audio/mpeg"
-        | Your browser does not support the audio tag.
-
-    audio controls=true autoplay=false loop=false muted=false
-        source src="/misc/kurs1.mp3" type="audio/mpeg"
-        | Your browser does not support the audio tag.
-
-    audio controls=true autoplay=false loop=false muted=false
-        source src="/misc/animales_kurs1.mp3" type="audio/mpeg"
+        source src="/misc/ljudkurser/nouns_kurs.mp3" type="audio/mpeg"
         | Your browser does not support the audio tag.
 
     p.spanish Drag and drop the correct words to the correct places to test your knowledge after listening to spanish!
-
-    section#pairingexcersice
-        section#selectwords
+    p.spanish Note that the english word's spansish translation will be in the same pair.
+    br
+    br
+    br
+    section#pairsection
+        section#pairingexcersice
             
-            section.wordpair ondrop="drop(event, this, 3)" ondragover="allowDrop(event)"
-                div#pair_number First pair
-                div#drag1 draggable="true" ondragstart="dragStart(event)" Cow
-                div#drag2 draggable="true" ondragstart="dragStart(event)" Ropa
+            section#selectwords
 
-            section.wordpair ondrop="drop(event, this, 3)" ondragover="allowDrop(event)"
-                div#pair_number Second pair
-                div#drag3 draggable="true" ondragstart="dragStart(event)" Hola 
-                div#drag4 draggable="true" ondragstart="dragStart(event)" Clothes
+                section.wordpair ondrop="drop(event, this, 3)" ondragover="allowDrop(event)"
+                    div#pair_number First pair
+                    div#drag1 draggable="true" ondragstart="dragStart(event)" Hamburger
+                    div#drag2 draggable="true" ondragstart="dragStart(event)" Computer
 
-            section.wordpair ondrop="drop(event, this, 3)" ondragover="allowDrop(event)"
-                div#pair_number Third pair
-                div#drag5 draggable="true" ondragstart="dragStart(event)" Vacca
-                div#drag6 draggable="true" ondragstart="dragStart(event)" Hello
+                section.wordpair ondrop="drop(event, this, 3)" ondragover="allowDrop(event)"
+                    div#pair_number Second pair
+                    div#drag3 draggable="true" ondragstart="dragStart(event)" Pen
+                    div#drag4 draggable="true" ondragstart="dragStart(event)" Clock
 
-        section#pairthem 
-            section.pair
+                section.wordpair ondrop="drop(event, this, 3)" ondragover="allowDrop(event)"
+                    div#pair_number Third pair
+                    div#drag5 draggable="true" ondragstart="dragStart(event)" Shoes
+                    div#drag6 draggable="true" ondragstart="dragStart(event)" Hat
 
-                div#pair_number First Pair
-                div#drop1 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)" 
-                    p The first word:
-                div#drop2 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
-                    p The second word:
-            
-            section.pair
-                div#pair_number Second Pair
-                div#drop3 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
-                    p The third word:
-                div#drop4 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
-                    p The forth word:
-            
-            section.pair
-                div#pair_number Third Pair
-                div#drop5 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
-                    p The fifth word:
-                div#drop6 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
-                    p The sixth word:
+            span#right_arrow &rarr;
+            section#pairthem
+                section.pair
+
+                    div#pair_number First Pair
+
+                    div#spanish_word1
+                        p#spanish_word Hamburgesa
+
+                    div#drop1 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
+                    
+                    div#spanish_word2
+                        p#spanish_word Ordenador
+
+                    div#drop2 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
+                
+                section.pair
+
+                    div#pair_number Second Pair
+
+                    div#spanish_word1
+                        p#spanish_word Lapiz
+
+                    div#drop1 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
+                    
+                    div#spanish_word2
+                        p#spanish_word Reloj
+
+                    div#drop2 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
+                
+                section.pair
+
+                    div#pair_number Third Pair
+
+                    div#spanish_word1
+                        p#spanish_word Zapatos
+
+                    div#drop1 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"
+                    
+                    div#spanish_word2
+                        p#spanish_word Gorra
+
+                    div#drop2 ondrop="drop(event, this, 2)" ondragover="allowDrop(event)"

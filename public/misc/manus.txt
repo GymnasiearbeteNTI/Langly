@@ -7,7 +7,7 @@
 * Engelsk/Spansk del - substantiv
 - Hello - Hola
 - Friend - Amigo
-- Hamburger - hamburguesa
+- Hamburger - Hamburguesa
 - Water - Agua
 - Rabbit - Conejo
 - Computer - Ordenador

@@ -288,17 +288,22 @@ a {
 }
 
 .visual_wrapper {
-  border: solid black 3px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: rgb(255, 148, 106);
+  background-color: #DBE2EF;
+}
+
+.visual_wrapper article img {
+  border-radius: 20px;
+
 }
 
 .visual_wrapper article {
-  border: solid black 4px;
+  border-radius: 20px;
+  border: solid black 2px;
   display: flex;
   margin: 30px;
   height: 100px;
@@ -306,7 +311,7 @@ a {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  background-color: lightgreen;
+  background-color: #7fb1ee;
   cursor: pointer;
 }
 
@@ -351,14 +356,21 @@ a {
 }
 
 /* Pairing exercise */
+#pairsection {
 
+  display: flex;
+  justify-content: center;
+
+}
 #pairingexcersice {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   height: 600px;
-  background-color: #5595e2;
+  width: 1600px;
+  border-radius: 20px;
+  background-color: #a7bdda;
 }
 
 #pairthem {
@@ -384,7 +396,7 @@ a {
   font-size: 20px;
 }
 
-#selectwords div {
+.wordpair div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -392,20 +404,18 @@ a {
   height: 40px;
   background-color: salmon;
   border-radius: 10px;
-  margin-bottom: 10px;
   margin: 10px 5px 10px 5px;
 }
 
 #pair_number {
-  background-color: lightskyblue!important;
+  background-color: #3F72AF!important;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
   height: 40px;
   border-radius: 10px;
-  margin-bottom: 10px;
   margin: 10px 5px 10px 5px;
+  grid-area: pn;
 }
 
 #girl, #them {
@@ -418,30 +428,52 @@ a {
 }
 
 .pair {
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+            "pn pn"
+            "s1 d1"
+            "s2 d2";
   margin: 10px 0px 10px 0px;
   background-color: antiquewhite;
   border-radius: 10px;
   width: auto;
   height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+#spanish_word1 {
+  grid-area: s1;
+  width: 110px;
+}
+
+#spanish_word2 {
+  grid-area: s2;
+  margin: 0px 5px 15px 5px;
+}
+
+#drop1 {
+  grid-area: d1;
+  min-width: 100px;
+}
+
+#drop2 {
+  grid-area: d2;
+  min-width: 100px;
+  margin: 0px 5px 15px 5px;
 }
 
 .pair div {
+  background-color: lightgreen;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 10px 5px 10px 5px;
   display: flex;
-  flex-direction: row;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   width: auto;
   height: auto;
   min-height: 30px;
-  background-color: greenyellow;
-  border-radius: 10px;
-  font-size: 20px;
-  margin-bottom: 10px;
-  margin: 10px 5px 10px 5px;
 }
 
 .wordpair {
@@ -572,11 +604,20 @@ input[type="password"] {
   text-align: center;
 }
 
+#text_section h2 {
+
+text-align: center;
+}
+
+
 table#spanish {
+  
   border-collapse: collapse;
   width: auto;
   font-size: 20px;
   margin: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 table#swedish {
@@ -587,7 +628,7 @@ table#swedish {
 }
 
 td, th {
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   text-align: left;
   padding: 8px;
 }
@@ -595,20 +636,22 @@ td, th {
 #title {
   text-align: center;
   margin-bottom: 10px;
+  
 }
 
 #intro {
+  
   text-align: center;
   font-size: 26px;
   margin-bottom: 10px;
 }
 
 tr:nth-child(even) {
-  background-color: #f4ff53;
+  background-color: #7fb1ee;
 }
 
 tr:nth-child(odd) {
-  background-color: rgb(255, 109, 109);
+  background-color: rgb(255, 255, 255);
 }
 
 #about_us {
@@ -648,9 +691,15 @@ footer div {
 .spanish {
   font-size: 20px;
   margin: 5px 0px 5px 10px;
+  text-align: center;
 }
 
 .spanish_bigger {
   margin: 5px 0px 5px 10px;
   font-size: 24px;
+  text-align: center;
+}
+
+#right_arrow {
+  font-size: 100px;
 }

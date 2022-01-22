@@ -150,11 +150,25 @@ post('/logout') do
 end
 
 post('/results') do
+    db = SQLite3::Database.new('db/db.db')
 
     if params["right"] == "on" && params["right2"] == "on" && params["wrong"] != "on" && params["text1"].downcase == "hi" && params["text2"].downcase == "friend" && params["text3"].downcase == "rabbit" && params["text4"].downcase == "hamburguesa"
         session[:quiz_result] = true
     else
         session[:quiz_result] = false
+    end
+
+    user_id = db.execute("SELECT userId FROM users WHERE Username=(?)",session[:loggedin_user]).first
+    
+    results = db.execute("SELECT results FROM quiz_result WHERE user_id=(?)",user_id)
+
+    case params["method"]
+    when "text"
+        db.execute("INSERT INTO quiz_result(user_id,results) VALUES(?,?)",user_id,)
+    when "audio"
+        p "a"
+    when "visual"
+        p "e"
     end
 
     redirect('/quiz')
