@@ -16,11 +16,11 @@ html lang="en"
 
             article.loggin_status
                 -if session[:loggedin_user] != nil
-                    h2 Logged in as #{session[:loggedin_user]}
+                    h2.spanish_bigger Logged in as #{session[:loggedin_user]}
                     form action="/logout" method="post"
                         input#logout type="submit" value="Logout"
                 -else
-                    h2 Currently not logged in
+                    h2.spanish_bigger Currently not logged in
 
             a href="/" Back to homepage         
 

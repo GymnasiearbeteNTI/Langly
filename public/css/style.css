@@ -393,6 +393,19 @@ a {
   background-color: salmon;
   border-radius: 10px;
   margin-bottom: 10px;
+  margin: 10px 5px 10px 5px;
+}
+
+#pair_number {
+  background-color: lightskyblue!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin: 10px 5px 10px 5px;
 }
 
 #girl, #them {
@@ -421,13 +434,26 @@ a {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  width: 200px;
+  width: auto;
   height: auto;
   min-height: 30px;
   background-color: greenyellow;
   border-radius: 10px;
   font-size: 20px;
   margin-bottom: 10px;
+  margin: 10px 5px 10px 5px;
+}
+
+.wordpair {
+  flex-direction: column;
+  margin: 10px 0px 10px 0px;
+  background-color: antiquewhite;
+  width: auto;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
 }
 
 .card {
@@ -568,10 +594,13 @@ td, th {
 
 #title {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 #intro {
   text-align: center;
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
 tr:nth-child(even) {
@@ -616,17 +645,12 @@ footer div {
   cursor: text;
 }
 
-.wordpair {
-  flex-direction: column;
-  margin: 10px 0px 10px 0px;
-  background-color: antiquewhite;
-  width: auto;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.spanish {
+  font-size: 20px;
+  margin: 5px 0px 5px 10px;
 }
 
-.pair_number {
-  background-color: lightskyblue!important;
+.spanish_bigger {
+  margin: 5px 0px 5px 10px;
+  font-size: 24px;
 }

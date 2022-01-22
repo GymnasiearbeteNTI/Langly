@@ -7,7 +7,7 @@
 * Engelsk/Spansk del - substantiv
 - Hello - Hola
 - Friend - Amigo
-- Hamburger - Hamburgesa
+- Hamburger - hamburguesa
 - Water - Agua
 - Rabbit - Conejo
 - Computer - Ordenador
@@ -22,7 +22,8 @@
 - Shoes - Zapatos
 - Hat - Gorra
 
-- Den första delen är nu klar.
+- Den första delen är nu klar. (1/6) => 17%
+___________________________________________________________________________________________________________
 
 * Engelsk/Spansk del - adjektiv
 
@@ -36,7 +37,8 @@
 - Big - Grande
 - Little - pequeño
 
-- Den andra delen är nu klar.
+- Den andra delen är nu klar. (2/6) => 33%
+___________________________________________________________________________________________________________
 
 * Engelsk/Spansk del - verb
 
@@ -50,7 +52,8 @@
 - Drink - Beber
 - Play - Jugar
 
-- Den tredje delen är nu klar.
+- Den tredje delen är nu klar. (3/6) => 50%
+___________________________________________________________________________________________________________
 
 * Engelsk/Spansk del - Vi fortsätter nu med pronomen vilket är sätt att hänvisa till människor:
 
@@ -63,7 +66,8 @@
 - We - Nosotros
 - You (them) - Ellos
 
-- Den fjärde delen är nu klar.
+- Den fjärde delen är nu klar. (4/6) => 67%
+___________________________________________________________________________________________________________
 
 * Engelsk/Spansk del - nummer
 
@@ -81,12 +85,12 @@
 - Ten - Dies
 - One hundred - Cien
 
-- Den femte delen är nu klar.
+- Den femte delen är nu klar. (5/6) => 83%
+___________________________________________________________________________________________________________
 
 * Engelsk/Spansk del - artiklar
 
 - Vi fortsätter nu med artiklar, lyssna noga:
-
 
 - masculine indefinite singular - el
 - feminine indefinite singular - la
@@ -99,4 +103,4 @@
 
 - Maskulin och feminin bestäms av den sista vokalen.
 
-- Den sjätte delen är nu klar.
+- Den sjätte delen är nu klar. (6/6) => 100%
