@@ -95,8 +95,6 @@ def loginfunc()
     loginuname = params["log_username"]
     loginpword = params["log_password"]
 
-    info = File.readlines('crypted_users.csv')
-
     begin
         existance_check_name = db.execute("SELECT Username FROM users WHERE Username =(?)", params["log_username"])
         existance_check_pass = db.execute("SELECT Password FROM users WHERE Username  =(?)", params["log_username"])

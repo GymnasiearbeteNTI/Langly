@@ -15,16 +15,13 @@ db.results_as_hash = true
 
 # puts hashed_password
 
-storable_string = "$2a$12$tLL00wickBpuQQDnz381uOZz4zwrLYBm2ojHk1kneBIRvLM1auvNO"
+# storable_string = "$2a$12$tLL00wickBpuQQDnz381uOZz4zwrLYBm2ojHk1kneBIRvLM1auvNO"
 
-restored_hash = BCrypt::Password.new storable_string
+# restored_hash = BCrypt::Password.new storable_string
 
-if restored_hash == "daniel29329399"
-    puts "funkar"
-end
-
-login_credentials = File.readlines("crypted_users.csv")
-p login_credentials[0]
+# if restored_hash == "daniel29329399"
+#     puts "funkar"
+# end
 
 #Alla get-metoder
 
