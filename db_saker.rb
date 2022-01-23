@@ -78,7 +78,7 @@ def registerfunc()
     db = SQLite3::Database.new('db/db.db')
     db.results_as_hash = true
     uname = params["reg_username"]
-    pword = params["reg_password"]
+    pword = BCrypt::Password.create(params["reg_password"])
     begin
         db.execute('INSERT INTO users(Username, Password) VALUES(?, ?)', uname, pword)
     rescue
@@ -99,7 +99,7 @@ def loginfunc()
         existance_check_name = db.execute("SELECT Username FROM users WHERE Username =(?)", params["log_username"])
         existance_check_pass = db.execute("SELECT Password FROM users WHERE Username  =(?)", params["log_username"])
 
-        if existance_check_pass[0][0] != loginpword
+        if BCrypt::Password.new(existance_check_pass[0][0]) != loginpword
             session[:log_error] = "Password error, the password was not correct :/"
             redirect('/login')
         else

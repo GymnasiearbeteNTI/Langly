@@ -1,11 +1,19 @@
-function translateCard() {
-  event.target.children[0].style.display = 'none';
-  event.target.children[1].style.display = 'block';
-}
 
 var turn = true;
 
 var itemParent = null;
+
+function translateCard(flip) {
+  if (flip == true){
+    event.target.children[0].style.display = 'none';
+    event.target.children[1].style.display = 'block';
+    turn = false;
+  } else {
+    event.target.children[0].style.display = 'block';
+    event.target.children[1].style.display = 'none';
+    turn = true;
+  }
+}
 
 function revealCards(flip) {
   if (flip == true){
