@@ -276,12 +276,21 @@ a:visited {
   margin-top: 6px;
 }
 
+.quiz_links {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.quiz_links h2 {
+  text-align: center;
+}
+
 #secret {
   color: rgb(199, 199, 199);
   margin-top: 6px;
 }
 
-.links:hover, #secret:hover {
+.links:hover, #secret:hover, .quiz_links:hover {
   text-decoration: underline;
 }
 
@@ -657,4 +666,11 @@ footer div {
 .small_section {
   height: auto;
   max-width: 250px;
+}
+
+#account_created {
+  color: green;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 5px;
 }

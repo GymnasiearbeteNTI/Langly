@@ -1,9 +1,9 @@
 div class="form_holder"
 
     div
-
         h2 You are just one step away from great learning!
         h2 Login to see your courses
+        p#account_created = session[:account_created]
 
     form action="/login" method="POST"
         h2 Enter credentials here
@@ -11,7 +11,7 @@ div class="form_holder"
         input#log_pw type="password" name="log_password" placeholder="Password" required="" autocomplete="off"
         input#login type="submit" Value="Login"
 
-        p=session[:log_error]
+        p = session[:log_error]
 
 footer 
     div Copyright &copy; 2021 Langly
